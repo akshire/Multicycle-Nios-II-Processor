@@ -17,7 +17,8 @@ entity PC is
 end PC;
 
 architecture synth of PC is
-process:
+
+process(reset_n)
 begin
 	addr <= 
 end process;
