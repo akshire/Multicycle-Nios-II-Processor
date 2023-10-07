@@ -6,8 +6,8 @@ entity decoder is
         address : in  std_logic_vector(15 downto 0);
         cs_LEDS : out std_logic;
         cs_RAM  : out std_logic;
-        cs_ROM  : out std_logic
-		cs_buttons : out std_logic;
+        cs_ROM  : out std_logic;
+		cs_buttons : out std_logic
     );
 end decoder;
 
@@ -32,23 +32,23 @@ begin
     
     process(address)
     begin
-        if address >= ROM_LB and  ROM_HB >= address then
+        if address >= ROM_LB and ROM_HB >= address then
             cs_LEDS <= '0';
             cs_RAM <= '0';
             cs_ROM <= '1';
-			cs_buttons <= '0'
+			cs_buttons <= '0';
         elsif address >= RAM_LB and RAM_LB >= address then
             cs_LEDS <= '0';
             cs_RAM <= '1';
             cs_ROM <= '0';
-			cs_buttons <= '0'
+			cs_buttons <= '0';
         elsif address >= LED_LB and LED_HB >= address then 
             cs_LEDS <= '1';
             cs_RAM <= '0';
             cs_ROM <= '0';
-			cs_buttons <= '0'
+			cs_buttons <= '0';
 		elsif address >= BUTTONS_LB and BUTTONS_HB >= address then 
-			cs_buttons <= '1'
+			cs_buttons <= '1';
 			cs_LEDS <= '0';
             cs_RAM <= '0';
             cs_ROM <= '0';
@@ -56,7 +56,7 @@ begin
             cs_LEDS <= '0';
             cs_RAM <= '0';
             cs_ROM <= '0';
-			cs_buttons <= '0'
+			cs_buttons <= '0';
 		
         end if;
         

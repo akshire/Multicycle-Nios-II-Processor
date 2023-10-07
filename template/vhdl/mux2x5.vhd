@@ -12,11 +12,6 @@ end mux2x5;
 
 architecture synth of mux2x5 is
 begin
-
-process:
-	begin
-	case sel is
-		when "0" => o <= i0,
-		when "1" => o <= i1
-end process
+	
+	o <= i1 when sel ='1' else i0;
 end synth;

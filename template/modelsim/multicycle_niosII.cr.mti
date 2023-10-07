@@ -1,5 +1,14 @@
-../vhdl/ROM_Block.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/ROM_Block.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+../vhdl/extend.vhd {0 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/extend.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity extend
+-- Compiling architecture synth of extend
+** Error: C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/extend.vhd(14): near "constant": syntax error
+
+} {8.0 9.0} {}} ../vhdl/ROM_Block.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/ROM_Block.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -7,7 +16,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling architecture SYN of rom_block
 
 } {} {}} ../vhdl/comparator.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/comparator.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -15,7 +24,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling architecture synth of comparator
 
 } {} {}} ../testbench/check_functions.vhd {2 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/check_functions.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -44,8 +53,16 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 ** Warning: C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/check_functions.vhd(169): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
 ** Warning: C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/check_functions.vhd(170): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
 
+} {} {}} ../vhdl/mux2x5.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/mux2x5.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux2x5
+-- Compiling architecture synth of mux2x5
+
 } {} {}} ../vhdl/ALU.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/ALU.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -53,7 +70,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling architecture bdf_type of ALU
 
 } {} {}} ../vhdl/add_sub.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/add_sub.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -61,25 +78,34 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity add_sub
 -- Compiling architecture synth of add_sub
 
+} {} {}} ../vhdl/IR.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/IR.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity IR
+-- Compiling architecture synth of IR
+
 } {} {}} ../vhdl/multiplexer.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/multiplexer.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity multiplexer
 -- Compiling architecture synth of multiplexer
 
-} {} {}} ../vhdl/PC.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/PC.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+} {} {}} ../vhdl/PC.vhd {0 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/PC.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
 -- Compiling entity PC
 -- Compiling architecture synth of PC
+** Error: C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/PC.vhd(20): near "process": (vcom-1576) expecting BEGIN.
 
-} {} {}} ../vhdl/register_file.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/register_file.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+} {9.0 10.0} {}} ../vhdl/register_file.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/register_file.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -87,16 +113,27 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity register_file
 -- Compiling architecture synth of register_file
 
-} {} {}} ../vhdl/controller.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/controller.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+} {} {}} ../vhdl/controller.vhd {0 {vcom -work work -2002 -explicit -stats=none {C:\Users\hubne\Desktop\computer_architecture\lab_3\template\vhdl\controller.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity controller
 -- Compiling architecture synth of controller
+** Error: C:\Users\hubne\Desktop\computer_architecture\lab_3\template\vhdl\controller.vhd(44): near ":": syntax error
+** Error: C:\Users\hubne\Desktop\computer_architecture\lab_3\template\vhdl\controller.vhd(50): Illegal sequential statement.
+** Error: C:\Users\hubne\Desktop\computer_architecture\lab_3\template\vhdl\controller.vhd(50): near ":": syntax error
+
+} {8.0 11.0} {}} ../vhdl/ROM.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/ROM.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity ROM
+-- Compiling architecture synth of ROM
 
 } {} {}} ../testbench/tb_Extend.vhd {2 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_Extend.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -108,7 +145,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 ** Warning: C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_Extend.vhd(42): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
 
 } {} {}} ../vhdl/buttons.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/buttons.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -116,26 +153,16 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity buttons
 -- Compiling architecture synth of buttons
 
-} {} {}} ../vhdl/RAM.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/RAM.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+} {} {}} ../vhdl/CPU.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/CPU.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity RAM
--- Compiling architecture synth of RAM
-
-} {} {}} ../vhdl/LEDs.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/LEDs.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity LEDs
--- Compiling architecture synth of LEDs
+-- Compiling entity CPU
+-- Compiling architecture bdf_type of CPU
 
 } {} {}} ../testbench/tb_GECKO.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_GECKO.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -143,36 +170,42 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling architecture testbench of tb_GECKO
 -- Loading entity GECKO
 
-} {} {}} ../vhdl/CPU.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/CPU.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+} {} {}} ../vhdl/LEDs.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/LEDs.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity CPU
--- Compiling architecture bdf_type of CPU
+-- Loading package NUMERIC_STD
+-- Compiling entity LEDs
+-- Compiling architecture synth of LEDs
+
+} {} {}} ../vhdl/RAM.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/RAM.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity RAM
+-- Compiling architecture synth of RAM
+
+} {} {}} ../vhdl/mux2x32.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/mux2x32.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux2x32
+-- Compiling architecture synth of mux2x32
 
 } {} {}} ../vhdl/GECKO.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/GECKO.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity GECKO
 -- Compiling architecture bdf_type of GECKO
 
-} {} {}} ../testbench/tb_IR.vhd {2 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_IR.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package std_logic_textio
--- Loading package check_functions
--- Compiling entity tb_IR
--- Compiling architecture testbench of tb_IR
-** Warning: C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_IR.vhd(42): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-** Warning: C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_IR.vhd(44): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-
 } {} {}} ../testbench/tb_PC.vhd {2 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_PC.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -183,8 +216,28 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 ** Warning: C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_PC.vhd(57): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
 ** Warning: C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_PC.vhd(59): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
 
+} {} {}} ../testbench/tb_IR.vhd {2 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_IR.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_textio
+-- Loading package check_functions
+-- Compiling entity tb_IR
+-- Compiling architecture testbench of tb_IR
+** Warning: C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_IR.vhd(42): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+** Warning: C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_IR.vhd(44): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+
+} {} {}} ../vhdl/mux2x16.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/mux2x16.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux2x16
+-- Compiling architecture synth of mux2x16
+
 } {} {}} ../testbench/tb_Controller.vhd {2 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_Controller.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -196,21 +249,29 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 ** Warning: C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_Controller.vhd(129): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
 ** Warning: C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_Controller.vhd(130): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
 
-} {} {}} ../vhdl/logic_unit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/logic_unit.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity logic_unit
--- Compiling architecture synth of logic_unit
-
 } {} {}} ../vhdl/shift_unit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/shift_unit.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
 -- Compiling entity shift_unit
 -- Compiling architecture synth of shift_unit
+
+} {} {}} ../vhdl/logic_unit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/logic_unit.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity logic_unit
+-- Compiling architecture synth of logic_unit
+
+} {} {}} ../vhdl/decoder.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/decoder.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity decoder
+-- Compiling architecture synth of decoder
 
 } {} {}}
