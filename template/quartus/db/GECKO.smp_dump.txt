@@ -1,0 +1,24 @@
+
+State Machine - |GECKO|CPU:inst|controller:controller_0|next_state
+Name next_state.I_OP next_state.Load_2 next_state.Load_1 next_state.Break next_state.Store next_state.R_OP next_state.Decoder next_state.Fetch_2 next_state.Fetch_1 
+next_state.Fetch_1 0 0 0 0 0 0 0 0 0 
+next_state.Fetch_2 0 0 0 0 0 0 0 1 1 
+next_state.Decoder 0 0 0 0 0 0 1 0 1 
+next_state.R_OP 0 0 0 0 0 1 0 0 1 
+next_state.Store 0 0 0 0 1 0 0 0 1 
+next_state.Break 0 0 0 1 0 0 0 0 1 
+next_state.Load_1 0 0 1 0 0 0 0 0 1 
+next_state.Load_2 0 1 0 0 0 0 0 0 1 
+next_state.I_OP 1 0 0 0 0 0 0 0 1 
+
+State Machine - |GECKO|CPU:inst|controller:controller_0|current_state
+Name current_state.Fetch_1 current_state.Load_2 current_state.Load_1 current_state.Break current_state.Store current_state.R_OP current_state.Decoder current_state.Fetch_2 current_state.I_OP 
+current_state.I_OP 0 0 0 0 0 0 0 0 0 
+current_state.Fetch_2 0 0 0 0 0 0 0 1 1 
+current_state.Decoder 0 0 0 0 0 0 1 0 1 
+current_state.R_OP 0 0 0 0 0 1 0 0 1 
+current_state.Store 0 0 0 0 1 0 0 0 1 
+current_state.Break 0 0 0 1 0 0 0 0 1 
+current_state.Load_1 0 0 1 0 0 0 0 0 1 
+current_state.Load_2 0 1 0 0 0 0 0 0 1 
+current_state.Fetch_1 1 0 0 0 0 0 0 0 1 
