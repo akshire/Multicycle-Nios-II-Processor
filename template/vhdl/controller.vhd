@@ -112,11 +112,65 @@ begin
 	
 	process(opx)
 	begin
+		case opx is
+			when x"31" => opx_o <= "000000";
+			when x"39" => opx_o <= "001000";
+			when x"0e" => opx_o <= "100001";
+			when x"16" => opx_o <= "100010";
+			when x"1e" => opx_o <= "100011"; 
+			when x"06" => opx_o <= "100000"; 
+			when x"08" => opx_o <= "011001"; 
+			when x"10" => opx_o <= "011010"; 
+			when x"18" => opx_o <= "011011"; 
+			when x"20" => opx_o <= "011100"; 
+			when x"28" => opx_o <= "011101";
+			when x"30" => opx_o <= "011110";
+			when x"13" => opx_o <= "110010";
+			when x"12" => opx_o <= "110010";
+			when x"1b" => opx_o <= "110011";
+			when x"1a" => opx_o <= "110011";
+			when x"3b" => opx_o <= "110111";
+			when x"3a" => opx_o <= "110111";
+			when x"03" => opx_o <= "110000";
+			when x"0b" => opx_o <= "110001";
+			when x"02" => opx_o <= "110000";
+			-- ICI ON SAIT PAS
+			when x"1d" => opx_o <= "000000";
+			when x"05" => opx_o <= "000000";
+			when x"0d" => opx_o <= "000000";
+			when others => opx_o <= "000000";
+		
 		opx_o <= "000" & opx(5 downto 3);
 	end process;
 	
 	process(op)
 	begin
+		case op is 
+			when x"04" => op_o <= "000000";
+			when x"0c" => op_o <= "000000";
+			when x"14" => op_o <= "100010";
+			when x"1c" => op_o <= "100011";
+			-- DON T KNOW IF ITS TYPO IN THE DOC 
+			when x"08" => op_o <= "011001";
+			when x"10" => op_o <= "01101";
+			when x"18" => op_o <= "011011";
+			when x"20" => op_o <= "011100";
+			when x"28" => op_o <= "011101";
+			when x"30" => op_o <= "011110";
+			when x"07" => op_o <= "000000";
+			when x"17" => op_o <= "000000";
+			when x"05" => op_o <= "000000";
+			when x"15" => op_o <= "000000";
+			when x"06" => op_o <= "000000";
+			when x"0e" => op_o <= "011001";
+			when x"16" => op_o <= "011010";
+			when x"1e" => op_o <= "011011";
+			when x"26" => op_o <= "011100";
+			when x"2e" => op_o <= "011101";
+			when x"36" => op_o <= "011110";
+			when others => op_o <= "00000";
+			
+			
 		op_o <= "000" & op(5 downto 3);
 	end process;
 	
