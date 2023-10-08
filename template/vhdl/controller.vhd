@@ -38,81 +38,131 @@ end controller;
 
 architecture synth of controller is
 type states is (Fetch_1,Fetch_2,Decoder, R_OP, Store, Break, Load_1,Load_2,I_OP);
-signal current_state, next_state : states;
+signal current_state: states := Fetch_1;
+signal next_state : states:=Fetch_2;
 signal op_o : std_logic_vector(5 downto 0);
 signal opx_o : std_logic_vector(5 downto 0);
+signal save_op : std_logic_vector(7 downto 0);
+signal save_opx : std_logic_vector(7 downto 0);
+
 begin
 
-	process(reset_n):
+	process(clk, reset_n)
 	begin
-		current_state <= I_OP;
-		next_state <= Fetch_1;
-	end process;
-
-	process(clk):
-	begin
-		if(rising_edge(clk)) then
-			current_state <= next_state;
-			case current_state is
-				when Fetch_1 =>
-					read <= '1';
-					next_state <= Fetch_2;
-				when Fetch_2 =>
-				-- READ SET A 0 SUPPOSITION
-					read <= '0';
-					pc_en <= '1';
-					ir_en <= '1';
-					next_state <= Decoder;
-				when Decoder =>
-					case op is
-						when x"17"=>
-							next_state <= Load_1
-						when x"3A" =>
-							if (opx = x"34") then
-								next_state <= Break;
-							else 
-								next_state <= R_OP;
-							end if;
-						when x"15" => next_state <= Store;
-						when others =>
-							next_state <= I_OP;
-						
-							
+		if(reset_n = '0') then
+			current_state <= I_OP;
+			next_state <= Fetch_1;
+			branch_op <= '0';
+			-- immediate value sign extention
+			imm_signed <= '0';
+			-- instruction register enable
+			ir_en <= '0';
+			-- PC control signals
+			pc_add_imm <= '0';
+			pc_en <= '0';
+			pc_sel_a <= '0';
+			pc_sel_imm  <= '0';
+			-- register file enable
+			rf_wren <= '0';
+			-- multiplexers selections
+			sel_addr <= '0';
+			sel_b <= '0';
+			sel_mem <= '0';
+			sel_pc <= '0';
+			sel_ra <= '0';
+			sel_rC  <= '0';
+			-- write memory output
+			read <= '0';
+			write <= '0';
+		else
+			if(rising_edge(clk)) then
+				current_state <= next_state;
+				case current_state is
+					when Fetch_1 =>
+						branch_op <= '0';
+						-- immediate value sign extention
+						imm_signed <= '0';
+						-- instruction register enable
+						ir_en <= '0';
+						-- PC control signals
+						pc_add_imm <= '0';
+						pc_en <= '0';
+						pc_sel_a <= '0';
+						pc_sel_imm  <= '0';
+						-- register file enable
+						rf_wren <= '0';
+						-- multiplexers selections
+						sel_addr <= '0';
+						sel_b <= '0';
+						sel_mem <= '0';
+						sel_pc <= '0';
+						sel_ra <= '0';
+						sel_rC  <= '0';
+						-- write memory output
+						write <= '0';
+						read <= '1';
+						next_state <= Fetch_2;
+					when Fetch_2 =>
+					-- READ SET A 0 SUPPOSITION
+						read <= '0';
+						pc_en <= '1';
+						ir_en <= '1';
+						next_state <= Decoder;
+					when Decoder =>
+						case op is
+						-- "010111" = 0x17
+							when "010111"=>
+								next_state <= Load_1;
+							when "111010" =>
+							-- "110100  = 0x34"
+								if (opx = "110100") then
+									next_state <= Break;
+								else 
+									next_state <= R_OP;
+								end if;
+								-- 0x15 = "010101"
+							when "010101" => next_state <= Store;
+							when others =>
+								next_state <= I_OP;
+							end case;
+					when R_OP =>
+						rf_wren <= '1';
+						sel_b <= '1';
+						sel_rC <= '1';
+						op_alu <= opx_o;
+						next_state <= Fetch_1;
+					when Store =>
+						next_state <= Fetch_1;
+					when Break =>
+						next_state <= Break;
+					when Load_1 =>
+						sel_addr <= '1';
+						read <= '1';
+						op_alu <= op_o;
+						-- SET A 1 BY SUPPOSITION
+						imm_signed <= '1';
+						sel_addr <= '1';
+						next_state <= Load_2;
+					when Load_2 =>
+						read <= '0';
+						rf_wren <= '1';
+						sel_mem <= '1';
+						next_state <= Fetch_1;
+					when I_OP =>
+						op_alu <= op_o;
+						next_state <= Fetch_1;
 					
-				when R_OP =>
-					rf_wren <= '1';
-					sel_b <= '1';
-					sel_rC <= '1';
-					op_alu <= opx_o;
-					next_state <= Fetch_1;
-				when Store =>
-					next_state <= Fetch_1;
-				when Break =>
-					next_state <= Break;
-				when Load_1 =>
-					sel_addr <= '1';
-					read <= '1';
-					op_alu <= op_o;
-					-- SET A 1 BY SUPPOSITION
-					imm_signed <= '1';
-					sel_addr <= '1';
-					next_state <= Load_2;
-				when Load_2 =>
-					read <= '0';
-					rf_wren <= '1';
-					sel_mem <= '1';
-					next_state <= Fetch_1;
-				when I_OP =>
-					op_alu <= op_o;
-					next_state <= Fetch_1;
-				when others =>
-			end case;
+				end case;
+			end if;
 		end if;
+		
 	end process;
 	
 	process(opx)
 	begin
-		case opx is
+		save_opx <= ("00" & opx);
+		case (save_opx) is
+		-- 31
 			when x"31" => opx_o <= "000000";
 			when x"39" => opx_o <= "001000";
 			when x"0e" => opx_o <= "100001";
@@ -139,20 +189,20 @@ begin
 			when x"05" => opx_o <= "000000";
 			when x"0d" => opx_o <= "000000";
 			when others => opx_o <= "000000";
-		
-		opx_o <= "000" & opx(5 downto 3);
+		end case;
 	end process;
 	
 	process(op)
 	begin
-		case op is 
+		save_op <= ("00" & op);
+		case (save_op) is 
 			when x"04" => op_o <= "000000";
 			when x"0c" => op_o <= "000000";
 			when x"14" => op_o <= "100010";
 			when x"1c" => op_o <= "100011";
 			-- DON T KNOW IF ITS TYPO IN THE DOC 
 			when x"08" => op_o <= "011001";
-			when x"10" => op_o <= "01101";
+			when x"10" => op_o <= "011010";
 			when x"18" => op_o <= "011011";
 			when x"20" => op_o <= "011100";
 			when x"28" => op_o <= "011101";
@@ -168,10 +218,8 @@ begin
 			when x"26" => op_o <= "011100";
 			when x"2e" => op_o <= "011101";
 			when x"36" => op_o <= "011110";
-			when others => op_o <= "00000";
-			
-			
-		op_o <= "000" & op(5 downto 3);
+			when others => op_o <= "000000";
+		end case;
 	end process;
 	
 end synth;

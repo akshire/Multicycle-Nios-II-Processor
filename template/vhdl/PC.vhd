@@ -17,11 +17,21 @@ entity PC is
 end PC;
 
 architecture synth of PC is
-
-process(reset_n)
+signal address_save : integer;
 begin
-	addr <= 
-end process;
+	process(clk,reset_n, en)
+	begin
+		if reset_n = '0' then
+			address_save <= 0;
+		else
+			if rising_edge(clk) and en = '1' then
+				addr <= x"0000" & std_logic_vector(to_unsigned(address_save,16));
+				address_save <= address_save + 4;
+			end if;
+			
+		end if;
+		
+	end process;
 
-begin
+
 end synth;

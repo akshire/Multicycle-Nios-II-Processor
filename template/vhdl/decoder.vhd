@@ -57,6 +57,11 @@ begin
             cs_RAM <= '0';
             cs_ROM <= '0';
 			cs_buttons <= '0';
+		else
+			cs_LEDS <= '0';
+            cs_RAM <= '0';
+            cs_ROM <= '0';
+			cs_buttons <= '0';
 		
         end if;
         
