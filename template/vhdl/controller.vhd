@@ -40,186 +40,185 @@ architecture synth of controller is
 type states is (Fetch_1,Fetch_2,Decoder, R_OP, Store, Break, Load_1,Load_2,I_OP);
 signal current_state: states := Fetch_1;
 signal next_state : states:=Fetch_2;
-signal op_o : std_logic_vector(5 downto 0);
-signal opx_o : std_logic_vector(5 downto 0);
-signal save_op : std_logic_vector(7 downto 0);
-signal save_opx : std_logic_vector(7 downto 0);
-
 begin
 
-	process(clk, reset_n)
+
+
+	process(clk)
 	begin
-		if(reset_n = '0') then
-			current_state <= I_OP;
-			next_state <= Fetch_1;
-			branch_op <= '0';
-			-- immediate value sign extention
-			imm_signed <= '0';
-			-- instruction register enable
-			ir_en <= '0';
-			-- PC control signals
-			pc_add_imm <= '0';
-			pc_en <= '0';
-			pc_sel_a <= '0';
-			pc_sel_imm  <= '0';
-			-- register file enable
-			rf_wren <= '0';
-			-- multiplexers selections
-			sel_addr <= '0';
-			sel_b <= '0';
-			sel_mem <= '0';
-			sel_pc <= '0';
-			sel_ra <= '0';
-			sel_rC  <= '0';
-			-- write memory output
-			read <= '0';
-			write <= '0';
+		if reset_n = '0' then
+			current_state <= Fetch_1;
 		else
 			if(rising_edge(clk)) then
-				current_state <= next_state;
-				case current_state is
-					when Fetch_1 =>
-						branch_op <= '0';
-						-- immediate value sign extention
-						imm_signed <= '0';
-						-- instruction register enable
-						ir_en <= '0';
-						-- PC control signals
-						pc_add_imm <= '0';
-						pc_en <= '0';
-						pc_sel_a <= '0';
-						pc_sel_imm  <= '0';
-						-- register file enable
-						rf_wren <= '0';
-						-- multiplexers selections
-						sel_addr <= '0';
-						sel_b <= '0';
-						sel_mem <= '0';
-						sel_pc <= '0';
-						sel_ra <= '0';
-						sel_rC  <= '0';
-						-- write memory output
-						write <= '0';
-						read <= '1';
-						next_state <= Fetch_2;
-					when Fetch_2 =>
-					-- READ SET A 0 SUPPOSITION
-						read <= '0';
-						pc_en <= '1';
-						ir_en <= '1';
-						next_state <= Decoder;
-					when Decoder =>
-						case op is
-						-- "010111" = 0x17
-							when "010111"=>
-								next_state <= Load_1;
-							when "111010" =>
-							-- "110100  = 0x34"
-								if (opx = "110100") then
-									next_state <= Break;
-								else 
-									next_state <= R_OP;
-								end if;
-								-- 0x15 = "010101"
-							when "010101" => next_state <= Store;
-							when others =>
-								next_state <= I_OP;
-							end case;
-					when R_OP =>
-						rf_wren <= '1';
-						sel_b <= '1';
-						sel_rC <= '1';
-						op_alu <= opx_o;
-						next_state <= Fetch_1;
-					when Store =>
-						next_state <= Fetch_1;
-					when Break =>
-						next_state <= Break;
-					when Load_1 =>
-						sel_addr <= '1';
-						read <= '1';
-						op_alu <= op_o;
-						-- SET A 1 BY SUPPOSITION
-						imm_signed <= '1';
-						sel_addr <= '1';
-						next_state <= Load_2;
-					when Load_2 =>
-						read <= '0';
-						rf_wren <= '1';
-						sel_mem <= '1';
-						next_state <= Fetch_1;
-					when I_OP =>
-						op_alu <= op_o;
-						next_state <= Fetch_1;
-					
-				end case;
+			current_state <= next_state;
 			end if;
 		end if;
+	end process;
+
+	process(current_state)
+	begin
+		case current_state is
+			when Fetch_1 =>
+				branch_op <= '0';
+				-- immediate value sign extention
+				imm_signed <= '0';
+				-- instruction register enable
+				ir_en <= '0';
+				-- PC control signals
+				pc_add_imm <= '0';
+				pc_en <= '0';
+				pc_sel_a <= '0';
+				pc_sel_imm  <= '0';
+				-- register file enable
+				rf_wren <= '0';
+				-- multiplexers selections
+				sel_addr <= '0';
+				sel_b <= '0';
+				sel_mem <= '0';
+				sel_pc <= '0';
+				sel_ra <= '0';
+				sel_rC  <= '0';
+				pc_en <= '0';
+				-- write memory output
+				write <= '0';
+				read <= '1';
+				next_state <= Fetch_2;
+			when Fetch_2 =>
+			-- READ SET A 0 SUPPOSITION
+				read <= '0';
+				pc_en <= '1';
+				ir_en <= '1';
+				next_state <= Decoder;
+			when Decoder =>
+				pc_en <= '0';
+				ir_en <= '0';
+				rf_wren <= '0';
+				sel_rC <= '0';
+				sel_b <= '0';
+				case op is
+				-- "010111" = 0x17
+					when "010111"=>
+						next_state <= Load_1;
+					when "111010" =>
+					-- "110100  = 0x34"
+						if (opx = "110100") then
+							next_state <= Break;
+						else 
+							next_state <= R_OP;
+							
+						end if;
+						-- 0x15 = "010101"
+					when "010101" => next_state <= Store;
+					when others =>
+						next_state <= I_OP;
+					end case;
+			when R_OP =>
+				rf_wren <= '1';
+				sel_b <= '1';
+				sel_rC <= '1';
+				
+				next_state <= Fetch_1;
+			when Store =>
+				imm_signed<='1';
+				write <= '1';
+				sel_addr <= '1';
+				next_state <= Fetch_1;
+			when Break =>
+				next_state <= Break;
+			when Load_1 =>
+				sel_addr <= '1';
+				read <= '1';
+				--op_alu <= op_alu_o;
+				-- SET A 1 BY SUPPOSITION
+				imm_signed <= '1';
+				sel_addr <= '1';
+				next_state <= Load_2;
+			when Load_2 =>
+				read <= '0';
+				rf_wren <= '1';
+				sel_mem <= '1';
+				next_state <= Fetch_1;
+			when I_OP =>
+				imm_signed <= '1';
+				rf_wren <= '1';
+				sel_b <= '0';
+				sel_rC <= '0';
+				
+				next_state <= Fetch_1;
+			
+		end case;
 		
 	end process;
 	
-	process(opx)
+	process(opx, op)
 	begin
-		save_opx <= ("00" & opx);
-		case (save_opx) is
+		
+		
+		if(op = "111010") then
+			case (opx) is
 		-- 31
-			when x"31" => opx_o <= "000000";
-			when x"39" => opx_o <= "001000";
-			when x"0e" => opx_o <= "100001";
-			when x"16" => opx_o <= "100010";
-			when x"1e" => opx_o <= "100011"; 
-			when x"06" => opx_o <= "100000"; 
-			when x"08" => opx_o <= "011001"; 
-			when x"10" => opx_o <= "011010"; 
-			when x"18" => opx_o <= "011011"; 
-			when x"20" => opx_o <= "011100"; 
-			when x"28" => opx_o <= "011101";
-			when x"30" => opx_o <= "011110";
-			when x"13" => opx_o <= "110010";
-			when x"12" => opx_o <= "110010";
-			when x"1b" => opx_o <= "110011";
-			when x"1a" => opx_o <= "110011";
-			when x"3b" => opx_o <= "110111";
-			when x"3a" => opx_o <= "110111";
-			when x"03" => opx_o <= "110000";
-			when x"0b" => opx_o <= "110001";
-			when x"02" => opx_o <= "110000";
+			when "110001" => op_alu <= "000000";
+			when "111001" => op_alu <= "001000";
+			when "001110" => op_alu <= "100001";
+			when "010110" => op_alu <= "100010";
+			when "011110" => op_alu <= "100011"; 
+			when "000110" => op_alu <= "100000"; 
+			when "001000" => op_alu <= "011001"; 
+			when "010000" => op_alu <= "011010"; 
+			when "011000" => op_alu <= "011011"; 
+			when "100000" => op_alu <= "011100"; 
+			when "101000" => op_alu <= "011101";
+			when "110000" => op_alu <= "011110";
+			when "010011" => op_alu <= "110010";
+			when "010010" => op_alu <= "110010";
+			when "011011" => op_alu <= "110011";
+			
+			when "011010" => op_alu <= "110011";
+			when "111011" => op_alu <= "110111";
+			when "111010" => op_alu <= "110111";
+			when "000011" => op_alu <= "110000";
+			when "001011" => op_alu <= "110001";
+			when "000010" => op_alu <= "110000";
 			-- ICI ON SAIT PAS
-			when x"1d" => opx_o <= "000000";
-			when x"05" => opx_o <= "000000";
-			when x"0d" => opx_o <= "000000";
-			when others => opx_o <= "000000";
+			when "011101" => op_alu <= "000000";
+			when "000101" => op_alu <= "000000";
+			when "001101" => op_alu <= "000000";
+			when others => 
+			
 		end case;
+			
+		else
+			case (op) is 
+			when "000100" => op_alu <= "000000";
+			when "001100" => op_alu <= "000000";
+			when "010100" => op_alu <= "100010";
+			when "011100" => op_alu <= "100011";
+			-- DON T KNOW IF ITS TYPO IN THE DOC 
+			when "001000" => op_alu <= "011001";
+			when "010000" => op_alu <= "011010";
+			when "011000" => op_alu <= "011011";
+			when "100000" => op_alu <= "011100";
+			when "101000" => op_alu <= "011101";
+			when "110000" => op_alu <= "011110";
+			when "000111" => op_alu <= "000000";
+			when "010111" => op_alu <= "000000";
+			when "000101" => op_alu <= "000000";
+			when "010101" => op_alu <= "000000";
+			when "000110" => op_alu <= "000000";
+			when "001110" => op_alu <= "011001";
+			when "010110" => op_alu <= "011010";
+			when "011110" => op_alu <= "011011";
+			when "100110" => op_alu <= "011100";
+			when "101110" => op_alu <= "011101";
+			when "110110" => op_alu <= "011110";
+			when others => op_alu <= "000000";
+		end case;
+		end if;
+		
+		
+		
 	end process;
 	
-	process(op)
-	begin
-		save_op <= ("00" & op);
-		case (save_op) is 
-			when x"04" => op_o <= "000000";
-			when x"0c" => op_o <= "000000";
-			when x"14" => op_o <= "100010";
-			when x"1c" => op_o <= "100011";
-			-- DON T KNOW IF ITS TYPO IN THE DOC 
-			when x"08" => op_o <= "011001";
-			when x"10" => op_o <= "011010";
-			when x"18" => op_o <= "011011";
-			when x"20" => op_o <= "011100";
-			when x"28" => op_o <= "011101";
-			when x"30" => op_o <= "011110";
-			when x"07" => op_o <= "000000";
-			when x"17" => op_o <= "000000";
-			when x"05" => op_o <= "000000";
-			when x"15" => op_o <= "000000";
-			when x"06" => op_o <= "000000";
-			when x"0e" => op_o <= "011001";
-			when x"16" => op_o <= "011010";
-			when x"1e" => op_o <= "011011";
-			when x"26" => op_o <= "011100";
-			when x"2e" => op_o <= "011101";
-			when x"36" => op_o <= "011110";
-			when others => op_o <= "000000";
-		end case;
-	end process;
+	
 	
 end synth;

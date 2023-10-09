@@ -1,5 +1,5 @@
 Fitter report for GECKO
-Sun Oct  8 16:37:25 2023
+Mon Oct  9 15:30:06 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -26,14 +26,27 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
  18. Fitter Resource Utilization by Entity
  19. Delay Chain Summary
  20. Pad To Core Delay Chain Fanout
- 21. Routing Usage Summary
- 22. I/O Rules Summary
- 23. I/O Rules Details
- 24. I/O Rules Matrix
- 25. Fitter Device Options
- 26. Operating Settings and Conditions
- 27. Fitter Messages
- 28. Fitter Suppressed Messages
+ 21. Control Signals
+ 22. Global & Other Fast Signals
+ 23. Fitter RAM Summary
+ 24. |GECKO|CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_1|altsyncram_usi1:auto_generated|ALTSYNCRAM
+ 25. |GECKO|CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_0|altsyncram_usi1:auto_generated|ALTSYNCRAM
+ 26. |GECKO|ROM:ROM_0|ROM_Block:file_search|altsyncram:altsyncram_component|altsyncram_rna1:auto_generated|ALTSYNCRAM
+ 27. Routing Usage Summary
+ 28. LAB Logic Elements
+ 29. LAB-wide Signals
+ 30. LAB Signals Sourced
+ 31. LAB Signals Sourced Out
+ 32. LAB Distinct Inputs
+ 33. I/O Rules Summary
+ 34. I/O Rules Details
+ 35. I/O Rules Matrix
+ 36. Fitter Device Options
+ 37. Operating Settings and Conditions
+ 38. Estimated Delay Added for Hold Timing Summary
+ 39. Estimated Delay Added for Hold Timing Details
+ 40. Fitter Messages
+ 41. Fitter Suppressed Messages
 
 
 
@@ -60,20 +73,20 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Sun Oct  8 16:37:25 2023          ;
+; Fitter Status                      ; Successful - Mon Oct  9 15:30:06 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; GECKO                                          ;
 ; Top-level Entity Name              ; GECKO                                          ;
 ; Family                             ; Cyclone IV E                                   ;
 ; Device                             ; EP4CE30F23C8                                   ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 0 / 28,848 ( 0 % )                             ;
-;     Total combinational functions  ; 0 / 28,848 ( 0 % )                             ;
-;     Dedicated logic registers      ; 0 / 28,848 ( 0 % )                             ;
-; Total registers                    ; 0                                              ;
+; Total logic elements               ; 1,294 / 28,848 ( 4 % )                         ;
+;     Total combinational functions  ; 1,261 / 28,848 ( 4 % )                         ;
+;     Dedicated logic registers      ; 340 / 28,848 ( 1 % )                           ;
+; Total registers                    ; 340                                            ;
 ; Total pins                         ; 102 / 329 ( 31 % )                             ;
 ; Total virtual pins                 ; 0                                              ;
-; Total memory bits                  ; 0 / 608,256 ( 0 % )                            ;
+; Total memory bits                  ; 67,584 / 608,256 ( 11 % )                      ;
 ; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                                ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                                  ;
 +------------------------------------+------------------------------------------------+
@@ -147,12 +160,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
+; Average used               ; 1.07        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.2%      ;
+;     Processor 2            ;   3.0%      ;
+;     Processor 3            ;   2.2%      ;
+;     Processor 4            ;   2.1%      ;
 +----------------------------+-------------+
 
 
@@ -215,19 +230,19 @@ https://fpgasoftware.intel.com/eula.
 +----------+----------------+--------------+----------------+---------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------+
-; Incremental Compilation Preservation Summary                                                     ;
-+---------------------+--------------------+----------------------------+--------------------------+
-; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
-+---------------------+--------------------+----------------------------+--------------------------+
-; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 213 ) ; 0.00 % ( 0 / 213 )         ; 0.00 % ( 0 / 213 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 213 ) ; 0.00 % ( 0 / 213 )         ; 0.00 % ( 0 / 213 )       ;
-;                     ;                    ;                            ;                          ;
-; Routing (by net)    ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
-;     -- Achieved     ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
-+---------------------+--------------------+----------------------------+--------------------------+
++---------------------------------------------------------------------------------------------------+
+; Incremental Compilation Preservation Summary                                                      ;
++---------------------+---------------------+----------------------------+--------------------------+
+; Type                ; Total [A + B]       ; From Design Partitions [A] ; From Rapid Recompile [B] ;
++---------------------+---------------------+----------------------------+--------------------------+
+; Placement (by node) ;                     ;                            ;                          ;
+;     -- Requested    ; 0.00 % ( 0 / 1880 ) ; 0.00 % ( 0 / 1880 )        ; 0.00 % ( 0 / 1880 )      ;
+;     -- Achieved     ; 0.00 % ( 0 / 1880 ) ; 0.00 % ( 0 / 1880 )        ; 0.00 % ( 0 / 1880 )      ;
+;                     ;                     ;                            ;                          ;
+; Routing (by net)    ;                     ;                            ;                          ;
+;     -- Requested    ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
+;     -- Achieved     ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
++---------------------+---------------------+----------------------------+--------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -245,7 +260,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 205 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 1872 )   ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 8 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -256,126 +271,128 @@ https://fpgasoftware.intel.com/eula.
 The pin-out file can be found in C:/Users/hubne/Desktop/computer_architecture/lab_3/template/quartus/GECKO.pin.
 
 
-+-------------------------------------------------------------------+
-; Fitter Resource Usage Summary                                     ;
-+---------------------------------------------+---------------------+
-; Resource                                    ; Usage               ;
-+---------------------------------------------+---------------------+
-; Total logic elements                        ; 0 / 28,848 ( 0 % )  ;
-;     -- Combinational with no register       ; 0                   ;
-;     -- Register only                        ; 0                   ;
-;     -- Combinational with a register        ; 0                   ;
-;                                             ;                     ;
-; Logic element usage by number of LUT inputs ;                     ;
-;     -- 4 input functions                    ; 0                   ;
-;     -- 3 input functions                    ; 0                   ;
-;     -- <=2 input functions                  ; 0                   ;
-;     -- Register only                        ; 0                   ;
-;                                             ;                     ;
-; Logic elements by mode                      ;                     ;
-;     -- normal mode                          ; 0                   ;
-;     -- arithmetic mode                      ; 0                   ;
-;                                             ;                     ;
-; Total registers*                            ; 0 / 30,421 ( 0 % )  ;
-;     -- Dedicated logic registers            ; 0 / 28,848 ( 0 % )  ;
-;     -- I/O registers                        ; 0 / 1,573 ( 0 % )   ;
-;                                             ;                     ;
-; Total LABs:  partially or completely used   ; 0 / 1,803 ( 0 % )   ;
-; Virtual pins                                ; 0                   ;
-; I/O pins                                    ; 102 / 329 ( 31 % )  ;
-;     -- Clock pins                           ; 4 / 7 ( 57 % )      ;
-;     -- Dedicated input pins                 ; 0 / 9 ( 0 % )       ;
-;                                             ;                     ;
-; M9Ks                                        ; 0 / 66 ( 0 % )      ;
-; Total block memory bits                     ; 0 / 608,256 ( 0 % ) ;
-; Total block memory implementation bits      ; 0 / 608,256 ( 0 % ) ;
-; Embedded Multiplier 9-bit elements          ; 0 / 132 ( 0 % )     ;
-; PLLs                                        ; 0 / 4 ( 0 % )       ;
-; Global signals                              ; 0                   ;
-;     -- Global clocks                        ; 0 / 20 ( 0 % )      ;
-; JTAGs                                       ; 0 / 1 ( 0 % )       ;
-; CRC blocks                                  ; 0 / 1 ( 0 % )       ;
-; ASMI blocks                                 ; 0 / 1 ( 0 % )       ;
-; Oscillator blocks                           ; 0 / 1 ( 0 % )       ;
-; Impedance control blocks                    ; 0 / 4 ( 0 % )       ;
-; Average interconnect usage (total/H/V)      ; 0.0% / 0.0% / 0.0%  ;
-; Peak interconnect usage (total/H/V)         ; 0.0% / 0.0% / 0.0%  ;
-; Maximum fan-out                             ; 1                   ;
-; Highest non-global fan-out                  ; 1                   ;
-; Total fan-out                               ; 106                 ;
-; Average fan-out                             ; 0.50                ;
-+---------------------------------------------+---------------------+
++-------------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                           ;
++---------------------------------------------+---------------------------+
+; Resource                                    ; Usage                     ;
++---------------------------------------------+---------------------------+
+; Total logic elements                        ; 1,294 / 28,848 ( 4 % )    ;
+;     -- Combinational with no register       ; 954                       ;
+;     -- Register only                        ; 33                        ;
+;     -- Combinational with a register        ; 307                       ;
+;                                             ;                           ;
+; Logic element usage by number of LUT inputs ;                           ;
+;     -- 4 input functions                    ; 536                       ;
+;     -- 3 input functions                    ; 475                       ;
+;     -- <=2 input functions                  ; 250                       ;
+;     -- Register only                        ; 33                        ;
+;                                             ;                           ;
+; Logic elements by mode                      ;                           ;
+;     -- normal mode                          ; 1171                      ;
+;     -- arithmetic mode                      ; 90                        ;
+;                                             ;                           ;
+; Total registers*                            ; 340 / 30,421 ( 1 % )      ;
+;     -- Dedicated logic registers            ; 340 / 28,848 ( 1 % )      ;
+;     -- I/O registers                        ; 0 / 1,573 ( 0 % )         ;
+;                                             ;                           ;
+; Total LABs:  partially or completely used   ; 104 / 1,803 ( 6 % )       ;
+; Virtual pins                                ; 0                         ;
+; I/O pins                                    ; 102 / 329 ( 31 % )        ;
+;     -- Clock pins                           ; 4 / 7 ( 57 % )            ;
+;     -- Dedicated input pins                 ; 0 / 9 ( 0 % )             ;
+;                                             ;                           ;
+; M9Ks                                        ; 10 / 66 ( 15 % )          ;
+; Total block memory bits                     ; 67,584 / 608,256 ( 11 % ) ;
+; Total block memory implementation bits      ; 92,160 / 608,256 ( 15 % ) ;
+; Embedded Multiplier 9-bit elements          ; 0 / 132 ( 0 % )           ;
+; PLLs                                        ; 0 / 4 ( 0 % )             ;
+; Global signals                              ; 3                         ;
+;     -- Global clocks                        ; 3 / 20 ( 15 % )           ;
+; JTAGs                                       ; 0 / 1 ( 0 % )             ;
+; CRC blocks                                  ; 0 / 1 ( 0 % )             ;
+; ASMI blocks                                 ; 0 / 1 ( 0 % )             ;
+; Oscillator blocks                           ; 0 / 1 ( 0 % )             ;
+; Impedance control blocks                    ; 0 / 4 ( 0 % )             ;
+; Average interconnect usage (total/H/V)      ; 2.2% / 2.2% / 2.1%        ;
+; Peak interconnect usage (total/H/V)         ; 25.0% / 25.2% / 24.7%     ;
+; Maximum fan-out                             ; 329                       ;
+; Highest non-global fan-out                  ; 105                       ;
+; Total fan-out                               ; 5377                      ;
+; Average fan-out                             ; 2.90                      ;
++---------------------------------------------+---------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
 
 
-+--------------------------------------------------------------------------------------------------+
-; Fitter Partition Statistics                                                                      ;
-+---------------------------------------------+-------------------+--------------------------------+
-; Statistic                                   ; Top               ; hard_block:auto_generated_inst ;
-+---------------------------------------------+-------------------+--------------------------------+
-; Difficulty Clustering Region                ; Low               ; Low                            ;
-;                                             ;                   ;                                ;
-; Total logic elements                        ; 0 / 28848 ( 0 % ) ; 0 / 28848 ( 0 % )              ;
-;     -- Combinational with no register       ; 0                 ; 0                              ;
-;     -- Register only                        ; 0                 ; 0                              ;
-;     -- Combinational with a register        ; 0                 ; 0                              ;
-;                                             ;                   ;                                ;
-; Logic element usage by number of LUT inputs ;                   ;                                ;
-;     -- 4 input functions                    ; 0                 ; 0                              ;
-;     -- 3 input functions                    ; 0                 ; 0                              ;
-;     -- <=2 input functions                  ; 0                 ; 0                              ;
-;     -- Register only                        ; 0                 ; 0                              ;
-;                                             ;                   ;                                ;
-; Logic elements by mode                      ;                   ;                                ;
-;     -- normal mode                          ; 0                 ; 0                              ;
-;     -- arithmetic mode                      ; 0                 ; 0                              ;
-;                                             ;                   ;                                ;
-; Total registers                             ; 0                 ; 0                              ;
-;     -- Dedicated logic registers            ; 0 / 28848 ( 0 % ) ; 0 / 28848 ( 0 % )              ;
-;     -- I/O registers                        ; 0                 ; 0                              ;
-;                                             ;                   ;                                ;
-; Total LABs:  partially or completely used   ; 0 / 1803 ( 0 % )  ; 0 / 1803 ( 0 % )               ;
-;                                             ;                   ;                                ;
-; Virtual pins                                ; 0                 ; 0                              ;
-; I/O pins                                    ; 102               ; 0                              ;
-; Embedded Multiplier 9-bit elements          ; 0 / 132 ( 0 % )   ; 0 / 132 ( 0 % )                ;
-; Total memory bits                           ; 0                 ; 0                              ;
-; Total RAM block bits                        ; 0                 ; 0                              ;
-;                                             ;                   ;                                ;
-; Connections                                 ;                   ;                                ;
-;     -- Input Connections                    ; 0                 ; 0                              ;
-;     -- Registered Input Connections         ; 0                 ; 0                              ;
-;     -- Output Connections                   ; 0                 ; 0                              ;
-;     -- Registered Output Connections        ; 0                 ; 0                              ;
-;                                             ;                   ;                                ;
-; Internal Connections                        ;                   ;                                ;
-;     -- Total Connections                    ; 102               ; 4                              ;
-;     -- Registered Connections               ; 0                 ; 0                              ;
-;                                             ;                   ;                                ;
-; External Connections                        ;                   ;                                ;
-;     -- Top                                  ; 0                 ; 0                              ;
-;     -- hard_block:auto_generated_inst       ; 0                 ; 0                              ;
-;                                             ;                   ;                                ;
-; Partition Interface                         ;                   ;                                ;
-;     -- Input Ports                          ; 6                 ; 0                              ;
-;     -- Output Ports                         ; 96                ; 0                              ;
-;     -- Bidir Ports                          ; 0                 ; 0                              ;
-;                                             ;                   ;                                ;
-; Registered Ports                            ;                   ;                                ;
-;     -- Registered Input Ports               ; 0                 ; 0                              ;
-;     -- Registered Output Ports              ; 0                 ; 0                              ;
-;                                             ;                   ;                                ;
-; Port Connectivity                           ;                   ;                                ;
-;     -- Input Ports driven by GND            ; 0                 ; 0                              ;
-;     -- Output Ports driven by GND           ; 0                 ; 0                              ;
-;     -- Input Ports driven by VCC            ; 0                 ; 0                              ;
-;     -- Output Ports driven by VCC           ; 0                 ; 0                              ;
-;     -- Input Ports with no Source           ; 0                 ; 0                              ;
-;     -- Output Ports with no Source          ; 0                 ; 0                              ;
-;     -- Input Ports with no Fanout           ; 0                 ; 0                              ;
-;     -- Output Ports with no Fanout          ; 0                 ; 0                              ;
-+---------------------------------------------+-------------------+--------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Fitter Partition Statistics                                                                         ;
++---------------------------------------------+----------------------+--------------------------------+
+; Statistic                                   ; Top                  ; hard_block:auto_generated_inst ;
++---------------------------------------------+----------------------+--------------------------------+
+; Difficulty Clustering Region                ; Low                  ; Low                            ;
+;                                             ;                      ;                                ;
+; Total logic elements                        ; 1294 / 28848 ( 4 % ) ; 0 / 28848 ( 0 % )              ;
+;     -- Combinational with no register       ; 954                  ; 0                              ;
+;     -- Register only                        ; 33                   ; 0                              ;
+;     -- Combinational with a register        ; 307                  ; 0                              ;
+;                                             ;                      ;                                ;
+; Logic element usage by number of LUT inputs ;                      ;                                ;
+;     -- 4 input functions                    ; 536                  ; 0                              ;
+;     -- 3 input functions                    ; 475                  ; 0                              ;
+;     -- <=2 input functions                  ; 250                  ; 0                              ;
+;     -- Register only                        ; 33                   ; 0                              ;
+;                                             ;                      ;                                ;
+; Logic elements by mode                      ;                      ;                                ;
+;     -- normal mode                          ; 1171                 ; 0                              ;
+;     -- arithmetic mode                      ; 90                   ; 0                              ;
+;                                             ;                      ;                                ;
+; Total registers                             ; 340                  ; 0                              ;
+;     -- Dedicated logic registers            ; 340 / 28848 ( 1 % )  ; 0 / 28848 ( 0 % )              ;
+;     -- I/O registers                        ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Total LABs:  partially or completely used   ; 104 / 1803 ( 6 % )   ; 0 / 1803 ( 0 % )               ;
+;                                             ;                      ;                                ;
+; Virtual pins                                ; 0                    ; 0                              ;
+; I/O pins                                    ; 102                  ; 0                              ;
+; Embedded Multiplier 9-bit elements          ; 0 / 132 ( 0 % )      ; 0 / 132 ( 0 % )                ;
+; Total memory bits                           ; 67584                ; 0                              ;
+; Total RAM block bits                        ; 92160                ; 0                              ;
+; M9K                                         ; 10 / 66 ( 15 % )     ; 0 / 66 ( 0 % )                 ;
+; Clock control block                         ; 3 / 24 ( 12 % )      ; 0 / 24 ( 0 % )                 ;
+;                                             ;                      ;                                ;
+; Connections                                 ;                      ;                                ;
+;     -- Input Connections                    ; 0                    ; 0                              ;
+;     -- Registered Input Connections         ; 0                    ; 0                              ;
+;     -- Output Connections                   ; 0                    ; 0                              ;
+;     -- Registered Output Connections        ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Internal Connections                        ;                      ;                                ;
+;     -- Total Connections                    ; 5383                 ; 4                              ;
+;     -- Registered Connections               ; 712                  ; 0                              ;
+;                                             ;                      ;                                ;
+; External Connections                        ;                      ;                                ;
+;     -- Top                                  ; 0                    ; 0                              ;
+;     -- hard_block:auto_generated_inst       ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Partition Interface                         ;                      ;                                ;
+;     -- Input Ports                          ; 6                    ; 0                              ;
+;     -- Output Ports                         ; 96                   ; 0                              ;
+;     -- Bidir Ports                          ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Registered Ports                            ;                      ;                                ;
+;     -- Registered Input Ports               ; 0                    ; 0                              ;
+;     -- Registered Output Ports              ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Port Connectivity                           ;                      ;                                ;
+;     -- Input Ports driven by GND            ; 0                    ; 0                              ;
+;     -- Output Ports driven by GND           ; 0                    ; 0                              ;
+;     -- Input Ports driven by VCC            ; 0                    ; 0                              ;
+;     -- Output Ports driven by VCC           ; 0                    ; 0                              ;
+;     -- Input Ports with no Source           ; 0                    ; 0                              ;
+;     -- Output Ports with no Source          ; 0                    ; 0                              ;
+;     -- Input Ports with no Fanout           ; 0                    ; 0                              ;
+;     -- Output Ports with no Fanout          ; 0                    ; 0                              ;
++---------------------------------------------+----------------------+--------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -383,12 +400,12 @@ The pin-out file can be found in C:/Users/hubne/Desktop/computer_architecture/la
 +---------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; Name          ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +---------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
-; clk           ; T1    ; 2        ; 0            ; 21           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
-; in_buttons[0] ; B11   ; 8        ; 34           ; 43           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
-; in_buttons[1] ; A11   ; 8        ; 34           ; 43           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
-; in_buttons[2] ; B12   ; 7        ; 34           ; 43           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
-; in_buttons[3] ; A12   ; 7        ; 34           ; 43           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
-; reset_n       ; AB11  ; 3        ; 36           ; 0            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; clk           ; T1    ; 2        ; 0            ; 21           ; 21           ; 350                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; in_buttons[0] ; B11   ; 8        ; 34           ; 43           ; 21           ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; in_buttons[1] ; A11   ; 8        ; 34           ; 43           ; 14           ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; in_buttons[2] ; B12   ; 7        ; 34           ; 43           ; 7            ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; in_buttons[3] ; A12   ; 7        ; 34           ; 43           ; 0            ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; reset_n       ; AB11  ; 3        ; 36           ; 0            ; 14           ; 148                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
 +---------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 
 
@@ -1163,13 +1180,42 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------+------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                         ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+-------------+--------------+
-; |GECKO                     ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 102  ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |GECKO              ; GECKO       ; work         ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+-------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                 ;
++----------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                   ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                   ; Entity Name     ; Library Name ;
++----------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |GECKO                                       ; 1294 (70)   ; 340 (0)                   ; 0 (0)         ; 67584       ; 10   ; 0            ; 0       ; 0         ; 102  ; 0            ; 954 (70)     ; 33 (0)            ; 307 (44)         ; |GECKO                                                                                                ; GECKO           ; work         ;
+;    |CPU:inst|                                ; 1026 (0)    ; 214 (0)                   ; 0 (0)         ; 2048        ; 2    ; 0            ; 0       ; 0         ; 0    ; 0            ; 804 (0)      ; 27 (0)            ; 195 (0)          ; |GECKO|CPU:inst                                                                                       ; CPU             ; work         ;
+;       |ALU:alu_0|                            ; 566 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 561 (0)      ; 0 (0)             ; 5 (0)            ; |GECKO|CPU:inst|ALU:alu_0                                                                             ; ALU             ; work         ;
+;          |add_sub:add_sub_0|                 ; 109 (109)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 106 (106)    ; 0 (0)             ; 3 (3)            ; |GECKO|CPU:inst|ALU:alu_0|add_sub:add_sub_0                                                           ; add_sub         ; work         ;
+;          |comparator:comparator_0|           ; 12 (12)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 1 (1)            ; |GECKO|CPU:inst|ALU:alu_0|comparator:comparator_0                                                     ; comparator      ; work         ;
+;          |logic_unit:logic_unit_0|           ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |GECKO|CPU:inst|ALU:alu_0|logic_unit:logic_unit_0                                                     ; logic_unit      ; work         ;
+;          |multiplexer:multiplexer_0|         ; 101 (101)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 101 (101)    ; 0 (0)             ; 0 (0)            ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0                                                   ; multiplexer     ; work         ;
+;          |shift_unit:shift_unit_0|           ; 342 (342)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 341 (341)    ; 0 (0)             ; 1 (1)            ; |GECKO|CPU:inst|ALU:alu_0|shift_unit:shift_unit_0                                                     ; shift_unit      ; work         ;
+;       |IR:IR_0|                              ; 27 (27)     ; 27 (27)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 21 (21)          ; |GECKO|CPU:inst|IR:IR_0                                                                               ; IR              ; work         ;
+;       |PC:PC_0|                              ; 29 (29)     ; 28 (28)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 29 (29)          ; |GECKO|CPU:inst|PC:PC_0                                                                               ; PC              ; work         ;
+;       |controller:controller_0|              ; 64 (64)     ; 9 (9)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 45 (45)      ; 0 (0)             ; 19 (19)          ; |GECKO|CPU:inst|controller:controller_0                                                               ; controller      ; work         ;
+;       |mux2x16:mux_addr|                     ; 12 (12)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 10 (10)          ; |GECKO|CPU:inst|mux2x16:mux_addr                                                                      ; mux2x16         ; work         ;
+;       |mux2x32:mux_b|                        ; 29 (29)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 26 (26)      ; 0 (0)             ; 3 (3)            ; |GECKO|CPU:inst|mux2x32:mux_b                                                                         ; mux2x32         ; work         ;
+;       |mux2x32:mux_data|                     ; 159 (159)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 150 (150)    ; 0 (0)             ; 9 (9)            ; |GECKO|CPU:inst|mux2x32:mux_data                                                                      ; mux2x32         ; work         ;
+;       |mux2x5:mux_aw|                        ; 5 (5)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (5)            ; |GECKO|CPU:inst|mux2x5:mux_aw                                                                         ; mux2x5          ; work         ;
+;       |register_file:register_file_0|        ; 171 (171)   ; 150 (150)                 ; 0 (0)         ; 2048        ; 2    ; 0            ; 0       ; 0         ; 0    ; 0            ; 20 (20)      ; 21 (21)           ; 130 (130)        ; |GECKO|CPU:inst|register_file:register_file_0                                                         ; register_file   ; work         ;
+;          |altsyncram:reg_rtl_0|              ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 1024        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |GECKO|CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_0                                    ; altsyncram      ; work         ;
+;             |altsyncram_usi1:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 1024        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |GECKO|CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_0|altsyncram_usi1:auto_generated     ; altsyncram_usi1 ; work         ;
+;          |altsyncram:reg_rtl_1|              ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 1024        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |GECKO|CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_1                                    ; altsyncram      ; work         ;
+;             |altsyncram_usi1:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 1024        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |GECKO|CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_1|altsyncram_usi1:auto_generated     ; altsyncram_usi1 ; work         ;
+;    |LEDs:LEDs_0|                             ; 176 (176)   ; 115 (115)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 60 (60)      ; 6 (6)             ; 110 (110)        ; |GECKO|LEDs:LEDs_0                                                                                    ; LEDs            ; work         ;
+;    |RAM:RAM_0|                               ; 3 (3)       ; 1 (1)                     ; 0 (0)         ; 32768       ; 4    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 2 (2)            ; |GECKO|RAM:RAM_0                                                                                      ; RAM             ; work         ;
+;       |altsyncram:ram_rtl_0|                 ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 32768       ; 4    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |GECKO|RAM:RAM_0|altsyncram:ram_rtl_0                                                                 ; altsyncram      ; work         ;
+;          |altsyncram_vh41:auto_generated|    ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 32768       ; 4    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |GECKO|RAM:RAM_0|altsyncram:ram_rtl_0|altsyncram_vh41:auto_generated                                  ; altsyncram_vh41 ; work         ;
+;    |ROM:ROM_0|                               ; 4 (4)       ; 1 (1)                     ; 0 (0)         ; 32768       ; 4    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 2 (2)            ; |GECKO|ROM:ROM_0                                                                                      ; ROM             ; work         ;
+;       |ROM_Block:file_search|                ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 32768       ; 4    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |GECKO|ROM:ROM_0|ROM_Block:file_search                                                                ; ROM_Block       ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 32768       ; 4    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |GECKO|ROM:ROM_0|ROM_Block:file_search|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
+;             |altsyncram_rna1:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 32768       ; 4    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |GECKO|ROM:ROM_0|ROM_Block:file_search|altsyncram:altsyncram_component|altsyncram_rna1:auto_generated ; altsyncram_rna1 ; work         ;
+;    |buttons:buttons_0|                       ; 18 (18)     ; 9 (9)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 10 (10)          ; |GECKO|buttons:buttons_0                                                                              ; buttons         ; work         ;
+;    |decoder:decoder_0|                       ; 10 (10)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 1 (1)            ; |GECKO|decoder:decoder_0                                                                              ; decoder         ; work         ;
++----------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -1274,12 +1320,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; row8[2]       ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; row8[1]       ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; row8[0]       ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; in_buttons[0] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; in_buttons[1] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; in_buttons[2] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; in_buttons[3] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; clk           ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; reset_n       ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; clk           ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; reset_n       ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; in_buttons[0] ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; in_buttons[1] ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; in_buttons[3] ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; in_buttons[2] ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 +---------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
@@ -1288,29 +1334,407 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------+-------------------+---------+
 ; Source Pin / Fanout ; Pad To Core Index ; Setting ;
 +---------------------+-------------------+---------+
-; in_buttons[0]       ;                   ;         ;
-; in_buttons[1]       ;                   ;         ;
-; in_buttons[2]       ;                   ;         ;
-; in_buttons[3]       ;                   ;         ;
 ; clk                 ;                   ;         ;
 ; reset_n             ;                   ;         ;
+; in_buttons[0]       ;                   ;         ;
+; in_buttons[1]       ;                   ;         ;
+; in_buttons[3]       ;                   ;         ;
+; in_buttons[2]       ;                   ;         ;
 +---------------------+-------------------+---------+
 
 
-+---------------------------------------------+
-; Routing Usage Summary                       ;
-+-----------------------+---------------------+
-; Routing Resource Type ; Usage               ;
-+-----------------------+---------------------+
-; Block interconnects   ; 0 / 116,715 ( 0 % ) ;
-; C16 interconnects     ; 0 / 3,886 ( 0 % )   ;
-; C4 interconnects      ; 0 / 73,752 ( 0 % )  ;
-; Direct links          ; 0 / 116,715 ( 0 % ) ;
-; Global clocks         ; 0 / 20 ( 0 % )      ;
-; Local interconnects   ; 0 / 39,600 ( 0 % )  ;
-; R24 interconnects     ; 0 / 3,777 ( 0 % )   ;
-; R4 interconnects      ; 0 / 99,858 ( 0 % )  ;
-+-----------------------+---------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                             ;
++------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                                           ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; CPU:inst|PC:PC_0|addr[15]~0                    ; LCCOMB_X34_Y26_N22 ; 14      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; CPU:inst|controller:controller_0|WideOr0~0     ; LCCOMB_X29_Y25_N20 ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; CPU:inst|controller:controller_0|WideOr10~0    ; LCCOMB_X29_Y25_N8  ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; CPU:inst|controller:controller_0|WideOr2~0     ; LCCOMB_X29_Y25_N12 ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; CPU:inst|controller:controller_0|WideOr3~0     ; LCCOMB_X29_Y25_N10 ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; CPU:inst|controller:controller_0|WideOr5~0     ; LCCOMB_X29_Y25_N28 ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; CPU:inst|controller:controller_0|WideOr7~0     ; LCCOMB_X29_Y25_N2  ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; CPU:inst|controller:controller_0|WideOr8~0     ; LCCOMB_X29_Y25_N24 ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; CPU:inst|controller:controller_0|WideOr9~0     ; LCCOMB_X29_Y25_N4  ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; CPU:inst|controller:controller_0|ir_en         ; LCCOMB_X29_Y25_N16 ; 55      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; CPU:inst|controller:controller_0|op_alu[5]~18  ; LCCOMB_X28_Y24_N26 ; 6       ; Latch enable ; yes    ; Global Clock         ; GCLK0            ; --                        ;
+; CPU:inst|register_file:register_file_0|write~1 ; LCCOMB_X41_Y25_N12 ; 4       ; Write enable ; no     ; --                   ; --               ; --                        ;
+; LEDs:LEDs_0|LEDs_reg[0]~8                      ; LCCOMB_X36_Y28_N30 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; LEDs:LEDs_0|LEDs_reg[32]~9                     ; LCCOMB_X36_Y29_N30 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; LEDs:LEDs_0|LEDs_reg[64]~10                    ; LCCOMB_X34_Y25_N26 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; LEDs:LEDs_0|Mux63~4                            ; LCCOMB_X39_Y28_N26 ; 8       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; LEDs:LEDs_0|duty_cycle[7]~0                    ; LCCOMB_X34_Y28_N4  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; RAM:RAM_0|write_process~0                      ; LCCOMB_X34_Y25_N14 ; 4       ; Write enable ; no     ; --                   ; --               ; --                        ;
+; clk                                            ; PIN_T1             ; 22      ; Clock        ; no     ; --                   ; --               ; --                        ;
+; clk                                            ; PIN_T1             ; 329     ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; reset_n                                        ; PIN_AB11           ; 147     ; Async. clear ; yes    ; Global Clock         ; GCLK19           ; --                        ;
++------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                                                                               ;
++-----------------------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; Name                                          ; Location           ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-----------------------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; CPU:inst|controller:controller_0|op_alu[5]~18 ; LCCOMB_X28_Y24_N26 ; 6       ; 0                                    ; Global Clock         ; GCLK0            ; --                        ;
+; clk                                           ; PIN_T1             ; 329     ; 216                                  ; Global Clock         ; GCLK3            ; --                        ;
+; reset_n                                       ; PIN_AB11           ; 147     ; 0                                    ; Global Clock         ; GCLK19           ; --                        ;
++-----------------------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter RAM Summary                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
++-----------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+----------------------------------------------+----------------------------------------------------------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
+; Name                                                                                                      ; Type ; Mode             ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size  ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M9Ks ; MIF                                          ; Location                                                       ; Mixed Width RDW Mode ; Port A RDW Mode        ; Port B RDW Mode        ; ECC Mode ; ECC Pipeline Registers ; Fits in MLABs ;
++-----------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+----------------------------------------------+----------------------------------------------------------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
+; CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_0|altsyncram_usi1:auto_generated|ALTSYNCRAM     ; AUTO ; Simple Dual Port ; Single Clock ; 32           ; 32           ; 32           ; 32           ; yes                    ; no                      ; yes                    ; no                      ; 1024  ; 32                          ; 32                          ; 32                          ; 32                          ; 1024                ; 1    ; db/GECKO.ram0_register_file_87c776fc.hdl.mif ; M9K_X40_Y23_N0                                                 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
+; CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_1|altsyncram_usi1:auto_generated|ALTSYNCRAM     ; AUTO ; Simple Dual Port ; Single Clock ; 32           ; 32           ; 32           ; 32           ; yes                    ; no                      ; yes                    ; no                      ; 1024  ; 32                          ; 32                          ; 32                          ; 32                          ; 1024                ; 1    ; db/GECKO.ram0_register_file_87c776fc.hdl.mif ; M9K_X40_Y24_N0                                                 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
+; RAM:RAM_0|altsyncram:ram_rtl_0|altsyncram_vh41:auto_generated|ALTSYNCRAM                                  ; AUTO ; Single Port      ; Single Clock ; 1024         ; 32           ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 32768 ; 1024                        ; 32                          ; --                          ; --                          ; 32768               ; 4    ; None                                         ; M9K_X40_Y25_N0, M9K_X40_Y28_N0, M9K_X24_Y25_N0, M9K_X40_Y29_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
+; ROM:ROM_0|ROM_Block:file_search|altsyncram:altsyncram_component|altsyncram_rna1:auto_generated|ALTSYNCRAM ; AUTO ; ROM              ; Single Clock ; 1024         ; 32           ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 32768 ; 1024                        ; 32                          ; --                          ; --                          ; 32768               ; 4    ; ../quartus/ROM.hex                           ; M9K_X40_Y27_N0, M9K_X40_Y26_N0, M9K_X24_Y26_N0, M9K_X24_Y27_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
++-----------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+----------------------------------------------+----------------------------------------------------------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
+Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
+
+
+RAM content values are presented in the following format: (Binary) (Octal) (Decimal) (Hexadecimal) 
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; |GECKO|CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_1|altsyncram_usi1:auto_generated|ALTSYNCRAM                                                                                                                                                     ;
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+;   Addr   ;              +0              ;              +1              ;              +2              ;              +3              ;              +4              ;              +5              ;              +6              ;              +7              ;
++----------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+
+;0;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;8;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;16;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;24;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+
+
+RAM content values are presented in the following format: (Binary) (Octal) (Decimal) (Hexadecimal) 
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; |GECKO|CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_0|altsyncram_usi1:auto_generated|ALTSYNCRAM                                                                                                                                                     ;
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+;   Addr   ;              +0              ;              +1              ;              +2              ;              +3              ;              +4              ;              +5              ;              +6              ;              +7              ;
++----------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+
+;0;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;8;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;16;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;24;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+
+
+RAM content values are presented in the following format: (Binary) (Octal) (Decimal) (Hexadecimal) 
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; |GECKO|ROM:ROM_0|ROM_Block:file_search|altsyncram:altsyncram_component|altsyncram_rna1:auto_generated|ALTSYNCRAM                                                                                                                                                 ;
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+;   Addr   ;              +0              ;              +1              ;              +2              ;              +3              ;              +4              ;              +5              ;              +6              ;              +7              ;
++----------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+
+;0;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;8;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;16;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;24;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;32;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;40;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;48;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;56;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;64;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;72;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;80;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;88;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;96;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;104;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;112;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;120;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;128;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;136;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;144;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;152;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;160;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;168;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;176;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;184;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;192;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;200;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;208;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;216;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;224;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;232;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;240;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;248;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;256;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;264;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;272;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;280;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;288;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;296;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;304;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;312;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;320;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;328;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;336;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;344;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;352;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;360;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;368;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;376;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;384;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;392;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;400;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;408;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;416;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;424;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;432;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;440;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;448;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;456;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;464;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;472;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;480;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;488;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;496;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;504;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;512;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;520;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;528;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;536;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;544;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;552;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;560;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;568;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;576;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;584;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;592;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;600;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;608;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;616;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;624;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;632;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;640;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;648;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;656;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;664;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;672;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;680;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;688;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;696;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;704;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;712;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;720;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;728;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;736;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;744;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;752;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;760;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;768;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;776;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;784;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;792;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;800;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;808;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;816;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;824;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;832;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;840;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;848;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;856;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;864;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;872;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;880;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;888;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;896;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;904;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;912;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;920;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;928;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;936;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;944;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;952;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;960;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;968;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;976;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;984;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;992;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;1000;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;1008;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+;1016;(00000000000000000000000000000000) (0) (0) (00)    ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;(00000000000000000000000000000000) (0) (0) (00)   ;
+
+
++-------------------------------------------------+
+; Routing Usage Summary                           ;
++-----------------------+-------------------------+
+; Routing Resource Type ; Usage                   ;
++-----------------------+-------------------------+
+; Block interconnects   ; 2,377 / 116,715 ( 2 % ) ;
+; C16 interconnects     ; 85 / 3,886 ( 2 % )      ;
+; C4 interconnects      ; 1,429 / 73,752 ( 2 % )  ;
+; Direct links          ; 225 / 116,715 ( < 1 % ) ;
+; Global clocks         ; 3 / 20 ( 15 % )         ;
+; Local interconnects   ; 699 / 39,600 ( 2 % )    ;
+; R24 interconnects     ; 111 / 3,777 ( 3 % )     ;
+; R4 interconnects      ; 1,915 / 99,858 ( 2 % )  ;
++-----------------------+-------------------------+
+
+
++-----------------------------------------------------------------------------+
+; LAB Logic Elements                                                          ;
++---------------------------------------------+-------------------------------+
+; Number of Logic Elements  (Average = 12.44) ; Number of LABs  (Total = 104) ;
++---------------------------------------------+-------------------------------+
+; 1                                           ; 4                             ;
+; 2                                           ; 9                             ;
+; 3                                           ; 1                             ;
+; 4                                           ; 1                             ;
+; 5                                           ; 4                             ;
+; 6                                           ; 2                             ;
+; 7                                           ; 0                             ;
+; 8                                           ; 1                             ;
+; 9                                           ; 3                             ;
+; 10                                          ; 3                             ;
+; 11                                          ; 1                             ;
+; 12                                          ; 3                             ;
+; 13                                          ; 4                             ;
+; 14                                          ; 5                             ;
+; 15                                          ; 9                             ;
+; 16                                          ; 54                            ;
++---------------------------------------------+-------------------------------+
+
+
++--------------------------------------------------------------------+
+; LAB-wide Signals                                                   ;
++------------------------------------+-------------------------------+
+; LAB-wide Signals  (Average = 1.22) ; Number of LABs  (Total = 104) ;
++------------------------------------+-------------------------------+
+; 1 Async. clear                     ; 23                            ;
+; 1 Clock                            ; 67                            ;
+; 1 Clock enable                     ; 27                            ;
+; 1 Sync. clear                      ; 1                             ;
+; 2 Clock enables                    ; 8                             ;
+; 2 Clocks                           ; 1                             ;
++------------------------------------+-------------------------------+
+
+
++------------------------------------------------------------------------------+
+; LAB Signals Sourced                                                          ;
++----------------------------------------------+-------------------------------+
+; Number of Signals Sourced  (Average = 15.60) ; Number of LABs  (Total = 104) ;
++----------------------------------------------+-------------------------------+
+; 0                                            ; 0                             ;
+; 1                                            ; 2                             ;
+; 2                                            ; 9                             ;
+; 3                                            ; 3                             ;
+; 4                                            ; 1                             ;
+; 5                                            ; 3                             ;
+; 6                                            ; 3                             ;
+; 7                                            ; 1                             ;
+; 8                                            ; 0                             ;
+; 9                                            ; 0                             ;
+; 10                                           ; 0                             ;
+; 11                                           ; 1                             ;
+; 12                                           ; 3                             ;
+; 13                                           ; 3                             ;
+; 14                                           ; 2                             ;
+; 15                                           ; 4                             ;
+; 16                                           ; 17                            ;
+; 17                                           ; 11                            ;
+; 18                                           ; 8                             ;
+; 19                                           ; 5                             ;
+; 20                                           ; 2                             ;
+; 21                                           ; 3                             ;
+; 22                                           ; 5                             ;
+; 23                                           ; 4                             ;
+; 24                                           ; 2                             ;
+; 25                                           ; 5                             ;
+; 26                                           ; 1                             ;
+; 27                                           ; 2                             ;
+; 28                                           ; 2                             ;
+; 29                                           ; 0                             ;
+; 30                                           ; 0                             ;
+; 31                                           ; 1                             ;
+; 32                                           ; 1                             ;
++----------------------------------------------+-------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; LAB Signals Sourced Out                                                         ;
++-------------------------------------------------+-------------------------------+
+; Number of Signals Sourced Out  (Average = 8.98) ; Number of LABs  (Total = 104) ;
++-------------------------------------------------+-------------------------------+
+; 0                                               ; 0                             ;
+; 1                                               ; 7                             ;
+; 2                                               ; 8                             ;
+; 3                                               ; 5                             ;
+; 4                                               ; 5                             ;
+; 5                                               ; 4                             ;
+; 6                                               ; 5                             ;
+; 7                                               ; 5                             ;
+; 8                                               ; 5                             ;
+; 9                                               ; 5                             ;
+; 10                                              ; 18                            ;
+; 11                                              ; 8                             ;
+; 12                                              ; 10                            ;
+; 13                                              ; 5                             ;
+; 14                                              ; 2                             ;
+; 15                                              ; 2                             ;
+; 16                                              ; 4                             ;
+; 17                                              ; 0                             ;
+; 18                                              ; 2                             ;
+; 19                                              ; 2                             ;
+; 20                                              ; 0                             ;
+; 21                                              ; 0                             ;
+; 22                                              ; 0                             ;
+; 23                                              ; 0                             ;
+; 24                                              ; 0                             ;
+; 25                                              ; 0                             ;
+; 26                                              ; 1                             ;
+; 27                                              ; 0                             ;
+; 28                                              ; 0                             ;
+; 29                                              ; 0                             ;
+; 30                                              ; 0                             ;
+; 31                                              ; 1                             ;
++-------------------------------------------------+-------------------------------+
+
+
++------------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                          ;
++----------------------------------------------+-------------------------------+
+; Number of Distinct Inputs  (Average = 19.11) ; Number of LABs  (Total = 104) ;
++----------------------------------------------+-------------------------------+
+; 0                                            ; 0                             ;
+; 1                                            ; 2                             ;
+; 2                                            ; 0                             ;
+; 3                                            ; 3                             ;
+; 4                                            ; 0                             ;
+; 5                                            ; 3                             ;
+; 6                                            ; 4                             ;
+; 7                                            ; 4                             ;
+; 8                                            ; 0                             ;
+; 9                                            ; 1                             ;
+; 10                                           ; 3                             ;
+; 11                                           ; 3                             ;
+; 12                                           ; 0                             ;
+; 13                                           ; 2                             ;
+; 14                                           ; 5                             ;
+; 15                                           ; 3                             ;
+; 16                                           ; 3                             ;
+; 17                                           ; 6                             ;
+; 18                                           ; 4                             ;
+; 19                                           ; 2                             ;
+; 20                                           ; 6                             ;
+; 21                                           ; 7                             ;
+; 22                                           ; 3                             ;
+; 23                                           ; 7                             ;
+; 24                                           ; 4                             ;
+; 25                                           ; 4                             ;
+; 26                                           ; 2                             ;
+; 27                                           ; 1                             ;
+; 28                                           ; 5                             ;
+; 29                                           ; 1                             ;
+; 30                                           ; 2                             ;
+; 31                                           ; 2                             ;
+; 32                                           ; 2                             ;
+; 33                                           ; 2                             ;
+; 34                                           ; 3                             ;
+; 35                                           ; 1                             ;
+; 36                                           ; 2                             ;
+; 37                                           ; 1                             ;
++----------------------------------------------+-------------------------------+
 
 
 +------------------------------------------+
@@ -1469,12 +1893,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; row8[2]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; row8[1]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; row8[0]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; in_buttons[0]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; in_buttons[1]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; in_buttons[2]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; in_buttons[3]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; clk                ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; reset_n            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; in_buttons[0]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; in_buttons[1]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; in_buttons[3]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; in_buttons[2]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 
 
@@ -1514,6 +1938,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------+--------+
 
 
++------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Summary              ;
++-----------------+----------------------+-------------------+
+; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
++-----------------+----------------------+-------------------+
+; I/O             ; clk                  ; 1.2               ;
++-----------------+----------------------+-------------------+
+Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
+This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                                                                                                            ;
++--------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+-------------------+
+; Source Register                                        ; Destination Register                                                                                                        ; Delay Added in ns ;
++--------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+-------------------+
+; clk                                                    ; CPU:inst|IR:IR_0|Q[16]                                                                                                      ; 0.507             ;
+; CPU:inst|IR:IR_0|Q[20]                                 ; CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_1|altsyncram_usi1:auto_generated|ram_block1a21~porta_address_reg0 ; 0.297             ;
+; CPU:inst|IR:IR_0|Q[19]                                 ; CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_0|altsyncram_usi1:auto_generated|ram_block1a11~porta_address_reg0 ; 0.284             ;
+; CPU:inst|IR:IR_0|Q[25]                                 ; CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_1|altsyncram_usi1:auto_generated|ram_block1a21~porta_address_reg0 ; 0.194             ;
+; CPU:inst|controller:controller_0|sel_b                 ; CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_1|altsyncram_usi1:auto_generated|ram_block1a21~porta_address_reg0 ; 0.194             ;
+; CPU:inst|IR:IR_0|Q[24]                                 ; CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_0|altsyncram_usi1:auto_generated|ram_block1a11~porta_address_reg0 ; 0.194             ;
+; CPU:inst|controller:controller_0|current_state.Decoder ; CPU:inst|controller:controller_0|current_state.Break                                                                        ; 0.077             ;
++--------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+-------------------+
+Note: This table only shows the top 7 path(s) that have the largest delay added for hold.
+
+
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
@@ -1536,12 +1987,42 @@ Info (169124): Fitter converted 4 user pins into dedicated programming pins
     Info (169125): Pin ~ALTERA_DCLK~ is reserved at location K2
     Info (169125): Pin ~ALTERA_DATA0~ is reserved at location K1
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
+Info (176045): Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
+Warning (335093): The Timing Analyzer is analyzing 14 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Info (332104): Reading SDC File: 'GECKO.sdc'
+Warning (332060): Node: CPU:inst|controller:controller_0|current_state.Fetch_1 was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Latch CPU:inst|controller:controller_0|imm_signed is being clocked by CPU:inst|controller:controller_0|current_state.Fetch_1
+Warning (332060): Node: CPU:inst|IR:IR_0|Q[0] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Latch CPU:inst|controller:controller_0|op_alu[2] is being clocked by CPU:inst|IR:IR_0|Q[0]
+Warning (332060): Node: CPU:inst|controller:controller_0|current_state.Break was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Latch CPU:inst|controller:controller_0|rf_wren is being clocked by CPU:inst|controller:controller_0|current_state.Break
+Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning (332169): From clk (Rise) to clk (Rise) (setup and hold)
 Info (332129): Detected timing requirements -- optimizing circuit to achieve only the specified requirements
 Info (332111): Found 1 clocks
     Info (332111):   Period   Clock Name
     Info (332111): ======== ============
     Info (332111):   20.000          clk
+Info (176353): Automatically promoted node clk~input (placed in PIN T1 (CLK3, DIFFCLK_1n))
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G3
+    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node CPU:inst|IR:IR_0|Q[16] File: C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/IR.vhd Line: 18
+        Info (176357): Destination node CPU:inst|IR:IR_0|Q[15] File: C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/IR.vhd Line: 18
+        Info (176357): Destination node CPU:inst|IR:IR_0|Q[14] File: C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/IR.vhd Line: 18
+        Info (176357): Destination node CPU:inst|IR:IR_0|Q[13] File: C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/IR.vhd Line: 18
+        Info (176357): Destination node CPU:inst|IR:IR_0|Q[12] File: C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/IR.vhd Line: 18
+        Info (176357): Destination node CPU:inst|IR:IR_0|Q[11] File: C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/IR.vhd Line: 18
+        Info (176357): Destination node CPU:inst|controller:controller_0|current_state.Store File: C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/controller.vhd Line: 41
+        Info (176357): Destination node CPU:inst|controller:controller_0|current_state.Fetch_1 File: C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/controller.vhd Line: 41
+        Info (176357): Destination node CPU:inst|controller:controller_0|current_state.R_OP File: C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/controller.vhd Line: 41
+        Info (176357): Destination node CPU:inst|controller:controller_0|current_state.I_OP File: C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/controller.vhd Line: 41
+        Info (176358): Non-global destination nodes limited to 10 nodes
+Info (176353): Automatically promoted node CPU:inst|controller:controller_0|op_alu[5]~18  File: C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/controller.vhd Line: 153
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+Info (176353): Automatically promoted node reset_n~input (placed in PIN AB11 (CLK14, DIFFCLK_6n))
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G19
+    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node CPU:inst|PC:PC_0|addr[15]~0 File: C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/PC.vhd Line: 27
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
@@ -1597,40 +2078,40 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "row9[7]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "row9[8]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "row9[9]" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
 Info (170193): Fitter routing operations beginning
-Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X0_Y22 to location X10_Y32
+Info (170195): Router estimated average interconnect usage is 1% of the available device resources
+    Info (170196): Router estimated peak interconnect usage is 22% of the available device resources in the region that extends from location X34_Y22 to location X44_Y32
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.01 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
+Info (11888): Total time spent on timing analysis during the Fitter is 0.71 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169177): 6 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone IV E Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
-    Info (169178): Pin in_buttons[0] uses I/O standard 3.3-V LVTTL at B11
-    Info (169178): Pin in_buttons[1] uses I/O standard 3.3-V LVTTL at A11
-    Info (169178): Pin in_buttons[2] uses I/O standard 3.3-V LVTTL at B12
-    Info (169178): Pin in_buttons[3] uses I/O standard 3.3-V LVTTL at A12
     Info (169178): Pin clk uses I/O standard 3.3-V LVTTL at T1
     Info (169178): Pin reset_n uses I/O standard 3.3-V LVTTL at AB11
+    Info (169178): Pin in_buttons[0] uses I/O standard 3.3-V LVTTL at B11
+    Info (169178): Pin in_buttons[1] uses I/O standard 3.3-V LVTTL at A11
+    Info (169178): Pin in_buttons[3] uses I/O standard 3.3-V LVTTL at A12
+    Info (169178): Pin in_buttons[2] uses I/O standard 3.3-V LVTTL at B12
 Info (144001): Generated suppressed messages file C:/Users/hubne/Desktop/computer_architecture/lab_3/template/quartus/GECKO.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 57 warnings
-    Info: Peak virtual memory: 5544 megabytes
-    Info: Processing ended: Sun Oct  8 16:37:25 2023
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:02
+Info: Quartus Prime Fitter was successful. 0 errors, 63 warnings
+    Info: Peak virtual memory: 5577 megabytes
+    Info: Processing ended: Mon Oct  9 15:30:06 2023
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:06
 
 
 +----------------------------+

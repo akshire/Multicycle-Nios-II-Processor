@@ -1,0 +1,75 @@
+MIF/HEX Update report for GECKO
+Mon Oct  9 15:37:50 2023
+Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. MIF/HEX Update Summary
+  3. MIF/HEX Update Processed Files
+  4. MIF/HEX Update Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------+
+; MIF/HEX Update Summary                                        ;
++-----------------------+---------------------------------------+
+; MIF/HEX Update Status ; Successful - Mon Oct  9 15:37:50 2023 ;
+; Revision Name         ; GECKO                                 ;
+; Top-level Entity Name ; GECKO                                 ;
+; Family                ; Cyclone IV E                          ;
+; Device                ; EP4CE30F23C8                          ;
++-----------------------+---------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; MIF/HEX Update Processed Files                                                                                   ;
++------------------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                        ;
++------------------------------------------------------------------------------------------------------------------+
+; C:/Users/hubne/Desktop/computer_architecture/lab_3/template/quartus/ROM.hex                                      ;
+; C:/Users/hubne/Desktop/computer_architecture/lab_3/template/quartus/db/gecko.ram0_register_file_87c776fc.hdl.mif ;
++------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------+
+; MIF/HEX Update Messages ;
++-------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime MIF/HEX Update
+    Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+    Info: Processing started: Mon Oct  9 15:37:49 2023
+Info: Command: quartus_cdb GECKO -c GECKO --update_mif
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (39024): Processed the following Memory Initialization File(s)
+    Info (39025): Processed Memory Initialization File C:/Users/hubne/Desktop/computer_architecture/lab_3/template/quartus/ROM.hex File: C:/Users/hubne/Desktop/computer_architecture/lab_3/template/quartus/ROM.hex Line: 0
+    Info (39025): Processed Memory Initialization File C:/Users/hubne/Desktop/computer_architecture/lab_3/template/quartus/db/gecko.ram0_register_file_87c776fc.hdl.mif File: C:/Users/hubne/Desktop/computer_architecture/lab_3/template/quartus/db/gecko.ram0_register_file_87c776fc.hdl.mif Line: 0
+Info: Quartus Prime MIF/HEX Update was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4732 megabytes
+    Info: Processing ended: Mon Oct  9 15:37:50 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

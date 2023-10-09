@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Sun Oct  8 16:37:20 2023
+Analysis & Synthesis Status : Successful - Mon Oct  9 15:29:57 2023
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : GECKO
 Top-level Entity Name : GECKO
 Family : Cyclone IV E
-Total logic elements : 0
-    Total combinational functions : 0
-    Dedicated logic registers : 0
-Total registers : 0
+Total logic elements : 1,388
+    Total combinational functions : 1,196
+    Dedicated logic registers : 340
+Total registers : 340
 Total pins : 102
 Total virtual pins : 0
-Total memory bits : 0
+Total memory bits : 67,584
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0
