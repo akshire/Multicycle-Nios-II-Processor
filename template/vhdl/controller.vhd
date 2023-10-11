@@ -41,9 +41,6 @@ type states is (Fetch_1,Fetch_2,Decoder, R_OP, Store, Break, Load_1,Load_2,I_OP)
 signal current_state: states := Fetch_1;
 signal next_state : states:=Fetch_2;
 begin
-
-
-
 	process(clk)
 	begin
 		if reset_n = '0' then
@@ -59,45 +56,61 @@ begin
 	begin
 		case current_state is
 			when Fetch_1 =>
-				branch_op <= '0';
-				-- immediate value sign extention
-				imm_signed <= '0';
-				-- instruction register enable
-				ir_en <= '0';
-				-- PC control signals
-				pc_add_imm <= '0';
-				pc_en <= '0';
-				pc_sel_a <= '0';
+				branch_op   <= '0';
+				imm_signed  <= '0';
+				ir_en       <= '0';
+				pc_add_imm  <= '0';
+				pc_en       <= '0';
+				pc_sel_a    <= '0';
 				pc_sel_imm  <= '0';
-				-- register file enable
-				rf_wren <= '0';
-				-- multiplexers selections
-				sel_addr <= '0';
-				sel_b <= '0';
-				sel_mem <= '0';
-				sel_pc <= '0';
-				sel_ra <= '0';
-				sel_rC  <= '0';
-				pc_en <= '0';
-				-- write memory output
-				write <= '0';
-				read <= '1';
-				next_state <= Fetch_2;
+				rf_wren     <= '0';
+				sel_addr    <= '0';
+				sel_b       <= '0';
+				sel_mem     <= '0';
+				sel_pc      <= '0';
+				sel_ra      <= '0';
+				sel_rC      <= '0';
+				write       <= '0';
+				read        <= '1';
+				next_state  <= Fetch_2;
 			when Fetch_2 =>
-			-- READ SET A 0 SUPPOSITION
-				read <= '0';
-				pc_en <= '1';
-				ir_en <= '1';
-				next_state <= Decoder;
+				branch_op   <= '0';
+				imm_signed  <= '0';
+				ir_en       <= '1';
+				pc_add_imm  <= '0';
+				pc_en       <= '1';
+				pc_sel_a    <= '0';
+				pc_sel_imm  <= '0';
+				rf_wren     <= '0';
+				sel_addr    <= '0';
+				sel_b       <= '0';
+				sel_mem     <= '0';
+				sel_pc      <= '0';
+				sel_ra      <= '0';
+				sel_rC      <= '0';
+				write       <= '0';
+				read        <= '0';
+				next_state  <= Decoder;
 			when Decoder =>
-				pc_en <= '0';
-				ir_en <= '0';
-				rf_wren <= '0';
-				sel_rC <= '0';
-				sel_b <= '0';
+				branch_op   <= '0';
+				imm_signed  <= '0';
+				ir_en       <= '0';
+				pc_add_imm  <= '0';
+				pc_en       <= '0';
+				pc_sel_a    <= '0';
+				pc_sel_imm  <= '0';
+				rf_wren     <= '0';
+				sel_addr    <= '0';
+				sel_b       <= '0';
+				sel_mem     <= '0';
+				sel_pc      <= '0';
+				sel_ra      <= '0';
+				sel_rC      <= '0';
+				write       <= '0';
+				read        <= '0';
 				case op is
 				-- "010111" = 0x17
-					when "010111"=>
+					when "010111" =>
 						next_state <= Load_1;
 					when "111010" =>
 					-- "110100  = 0x34"
@@ -105,58 +118,129 @@ begin
 							next_state <= Break;
 						else 
 							next_state <= R_OP;
-							
 						end if;
 						-- 0x15 = "010101"
-					when "010101" => next_state <= Store;
-					when others =>
+					when "010101" => 
+						next_state <= Store;
+					when others   =>
 						next_state <= I_OP;
 					end case;
 			when R_OP =>
-				rf_wren <= '1';
-				sel_b <= '1';
-				sel_rC <= '1';
-				
-				next_state <= Fetch_1;
+				branch_op   <= '0';
+				imm_signed  <= '0';
+				ir_en       <= '0';
+				pc_add_imm  <= '0';
+				pc_en       <= '0';
+				pc_sel_a    <= '0';
+				pc_sel_imm  <= '0';
+				rf_wren     <= '1';
+				sel_addr    <= '0';
+				sel_b       <= '1';
+				sel_mem     <= '0';
+				sel_pc      <= '0';
+				sel_ra      <= '0';
+				sel_rC      <= '1';
+				write       <= '0';
+				read        <= '0';
+				next_state  <= Fetch_1;
 			when Store =>
-				imm_signed<='1';
-				write <= '1';
-				sel_addr <= '1';
-				next_state <= Fetch_1;
+				branch_op   <= '0';
+				imm_signed  <= '1';
+				ir_en       <= '0';
+				pc_add_imm  <= '0';
+				pc_en       <= '0';
+				pc_sel_a    <= '0';
+				pc_sel_imm  <= '0';
+				rf_wren     <= '0';
+				sel_addr    <= '1';
+				sel_b       <= '0';
+				sel_mem     <= '0';
+				sel_pc      <= '0';
+				sel_ra      <= '0';
+				sel_rC      <= '0';
+				write       <= '1';
+				read        <= '0';
+				next_state  <= Fetch_1;
 			when Break =>
-				next_state <= Break;
+				branch_op   <= '0';
+				imm_signed  <= '0';
+				ir_en       <= '0';
+				pc_add_imm  <= '0';
+				pc_en       <= '0';
+				pc_sel_a    <= '0';
+				pc_sel_imm  <= '0';
+				rf_wren     <= '0';
+				sel_addr    <= '0';
+				sel_b       <= '0';
+				sel_mem     <= '0';
+				sel_pc      <= '0';
+				sel_ra      <= '0';
+				sel_rC      <= '0';
+				write       <= '0';
+				read        <= '0';
+				next_state  <= Break;
 			when Load_1 =>
-				sel_addr <= '1';
-				read <= '1';
-				--op_alu <= op_alu_o;
-				-- SET A 1 BY SUPPOSITION
-				imm_signed <= '1';
-				sel_addr <= '1';
-				next_state <= Load_2;
+				branch_op   <= '0';
+				imm_signed  <= '1';
+				ir_en       <= '0';
+				pc_add_imm  <= '0';
+				pc_en       <= '0';
+				pc_sel_a    <= '0';
+				pc_sel_imm  <= '0';
+				rf_wren     <= '0';
+				sel_addr    <= '1';
+				sel_b       <= '0';
+				sel_mem     <= '0';
+				sel_pc      <= '0';
+				sel_ra      <= '0';
+				sel_rC      <= '0';
+				write       <= '0';
+				read        <= '1';
+				next_state  <= Load_2;
 			when Load_2 =>
-				read <= '0';
-				rf_wren <= '1';
-				sel_mem <= '1';
-				next_state <= Fetch_1;
+				branch_op   <= '0';
+				imm_signed  <= '1';
+				ir_en       <= '0';
+				pc_add_imm  <= '0';
+				pc_en       <= '0';
+				pc_sel_a    <= '0';
+				pc_sel_imm  <= '0';
+				rf_wren     <= '1';
+				sel_addr    <= '1';
+				sel_b       <= '0';
+				sel_mem     <= '1';
+				sel_pc      <= '0';
+				sel_ra      <= '0';
+				sel_rC      <= '0';
+				write       <= '0';
+				read        <= '0';
+				next_state  <= Fetch_1;
 			when I_OP =>
-				imm_signed <= '1';
-				rf_wren <= '1';
-				sel_b <= '0';
-				sel_rC <= '0';
-				
-				next_state <= Fetch_1;
-			
+				branch_op   <= '0';
+				imm_signed  <= '1';
+				ir_en       <= '0';
+				pc_add_imm  <= '0';
+				pc_en       <= '0';
+				pc_sel_a    <= '0';
+				pc_sel_imm  <= '0';
+				rf_wren     <= '1';
+				sel_addr    <= '0';
+				sel_b       <= '0';
+				sel_mem     <= '0';
+				sel_pc      <= '0';
+				sel_ra      <= '0';
+				sel_rC      <= '0';
+				write       <= '0';
+				read        <= '0';
+				next_state  <= Fetch_1;
 		end case;
-		
 	end process;
-	
 	process(opx, op)
 	begin
 		
 		
 		if(op = "111010") then
 			case (opx) is
-		-- 31
 			when "110001" => op_alu <= "000000";
 			when "111001" => op_alu <= "001000";
 			when "001110" => op_alu <= "100001";
@@ -172,7 +256,6 @@ begin
 			when "010011" => op_alu <= "110010";
 			when "010010" => op_alu <= "110010";
 			when "011011" => op_alu <= "110011";
-			
 			when "011010" => op_alu <= "110011";
 			when "111011" => op_alu <= "110111";
 			when "111010" => op_alu <= "110111";
@@ -183,8 +266,7 @@ begin
 			when "011101" => op_alu <= "000000";
 			when "000101" => op_alu <= "000000";
 			when "001101" => op_alu <= "000000";
-			when others => 
-			
+			when others   => 
 		end case;
 			
 		else
@@ -211,14 +293,8 @@ begin
 			when "100110" => op_alu <= "011100";
 			when "101110" => op_alu <= "011101";
 			when "110110" => op_alu <= "011110";
-			when others => op_alu <= "000000";
+			when others   => op_alu <= "000000";
 		end case;
 		end if;
-		
-		
-		
 	end process;
-	
-	
-	
 end synth;

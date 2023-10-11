@@ -140,7 +140,7 @@ Pcheck_functions
 Z28 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
 R2
 R3
-!i122 2275
+!i122 2284
 R21
 R4
 Z29 8../testbench/check_functions.vhd
@@ -152,9 +152,9 @@ V6aLKC8M`WFbUTzDPW6He83
 R7
 31
 b1
-Z31 !s110 1696858103
+Z31 !s110 1697014347
 !i10b 1
-Z32 !s108 1696858103.000000
+Z32 !s108 1697014346.000000
 Z33 !s90 -reportprogress|300|-93|../testbench/check_functions.vhd|
 Z34 !s107 ../testbench/check_functions.vhd|
 !i113 1
@@ -165,7 +165,7 @@ Z35 DPx4 work 15 check_functions 0 22 6aLKC8M`WFbUTzDPW6He83
 R28
 R2
 R3
-!i122 2275
+!i122 2284
 l0
 L40 1
 Vl_?7YlfeIC=0oLhh:^F<e2
@@ -222,10 +222,10 @@ R41
 R12
 R13
 Econtroller
-Z42 w1696858096
+Z42 w1697014339
 R2
 R3
-!i122 2274
+!i122 2283
 R4
 Z43 8../vhdl/controller.vhd
 Z44 F../vhdl/controller.vhd
@@ -235,11 +235,11 @@ V>:mGA0fg1bnEUkAc9L0EZ3
 !s100 iLCb?>B5ja1L5iDVmAU]]0
 R7
 31
-R31
+Z45 !s110 1697014346
 !i10b 1
 R32
-Z45 !s90 -reportprogress|300|-93|../vhdl/controller.vhd|
-Z46 !s107 ../vhdl/controller.vhd|
+Z46 !s90 -reportprogress|300|-93|../vhdl/controller.vhd|
+Z47 !s107 ../vhdl/controller.vhd|
 !i113 1
 o-93
 R13
@@ -247,18 +247,18 @@ Asynth
 R2
 R3
 DEx4 work 10 controller 0 22 >:mGA0fg1bnEUkAc9L0EZ3
-!i122 2274
+!i122 2283
 l43
-L39 189
-V2R0oFCBOYfHmZMlE@9^:;0
-!s100 @UF]^oiJoZ?RVnaz3ZA9l2
+L39 262
+VjR><^XFb1ci@hG4@>WNXN3
+!s100 e7^fm9FVIhEgOLNLoooQ02
 R7
 31
-R31
+R45
 !i10b 1
 R32
-R45
 R46
+R47
 !i113 1
 o-93
 R13
@@ -268,8 +268,8 @@ R2
 R3
 !i122 2151
 R4
-Z47 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/CPU.vhd
-Z48 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/CPU.vhd
+Z48 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/CPU.vhd
+Z49 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/CPU.vhd
 l0
 R17
 VoN1Z@H62cOJ8j76FSZXfk0
@@ -279,8 +279,8 @@ R7
 R24
 !i10b 1
 R25
-Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/CPU.vhd|
-Z50 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/CPU.vhd|
+Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/CPU.vhd|
+Z51 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/CPU.vhd|
 !i113 1
 R12
 R13
@@ -298,19 +298,19 @@ R7
 R24
 !i10b 1
 R25
-R49
 R50
+R51
 !i113 1
 R12
 R13
 Edecoder
-Z51 w1696775406
+Z52 w1696775406
 R2
 R3
 !i122 2168
 R4
-Z52 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/decoder.vhd
-Z53 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/decoder.vhd
+Z53 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/decoder.vhd
+Z54 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/decoder.vhd
 l0
 L4 1
 V^Jn:gLLKB9N@g;f1BY`XF2
@@ -320,8 +320,8 @@ R7
 R18
 !i10b 1
 R39
-Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/decoder.vhd|
-Z55 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/decoder.vhd|
+Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/decoder.vhd|
+Z56 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/decoder.vhd|
 !i113 1
 R12
 R13
@@ -339,19 +339,19 @@ R7
 R18
 !i10b 1
 R39
-R54
 R55
+R56
 !i113 1
 R12
 R13
 Eextend
-Z56 w1696677261
+Z57 w1696677261
 R2
 R3
 !i122 2152
 R4
-Z57 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/extend.vhd
-Z58 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/extend.vhd
+Z58 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/extend.vhd
+Z59 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/extend.vhd
 l0
 L4 1
 VUL_6DHeRdI@k7FglXE4m:2
@@ -361,8 +361,8 @@ R7
 R24
 !i10b 1
 R25
-Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/extend.vhd|
-Z60 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/extend.vhd|
+Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/extend.vhd|
+Z61 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/extend.vhd|
 !i113 1
 R12
 R13
@@ -380,8 +380,8 @@ R7
 R24
 !i10b 1
 R25
-R59
 R60
+R61
 !i113 1
 R12
 R13
@@ -391,8 +391,8 @@ R2
 R3
 !i122 2153
 R4
-Z61 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/GECKO.vhd
-Z62 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/GECKO.vhd
+Z62 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/GECKO.vhd
+Z63 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/GECKO.vhd
 l0
 L25 1
 VUUo[=d8;JL2NUd?KL5z>W3
@@ -402,15 +402,15 @@ R7
 R24
 !i10b 1
 R25
-Z63 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/GECKO.vhd|
-Z64 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/GECKO.vhd|
+Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/GECKO.vhd|
+Z65 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/GECKO.vhd|
 !i113 1
 R12
 R13
 Abdf_type
 R2
 R3
-Z65 DEx4 work 5 gecko 0 22 UUo[=d8;JL2NUd?KL5z>W3
+Z66 DEx4 work 5 gecko 0 22 UUo[=d8;JL2NUd?KL5z>W3
 !i122 2153
 l122
 L42 153
@@ -421,30 +421,30 @@ R7
 R24
 !i10b 1
 R25
-R63
 R64
+R65
 !i113 1
 R12
 R13
 Eir
-Z66 w1696775765
+Z67 w1696775765
 R2
 R3
 !i122 2154
 R4
-Z67 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/IR.vhd
-Z68 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/IR.vhd
+Z68 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/IR.vhd
+Z69 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/IR.vhd
 l0
 L4 1
 V^D0Sz[@@D76hLF6hc_Qm`1
 !s100 g>VC3<ZiU9SUL1eB^Hc9_3
 R7
 32
-Z69 !s110 1696853724
+Z70 !s110 1696853724
 !i10b 1
 R25
-Z70 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/IR.vhd|
-Z71 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/IR.vhd|
+Z71 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/IR.vhd|
+Z72 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/IR.vhd|
 !i113 1
 R12
 R13
@@ -459,11 +459,11 @@ VDdoNa><XPQ=dOg[hb>Oi_2
 !s100 742MiSmnf5SS1GIZV@f`F0
 R7
 32
-R69
+R70
 !i10b 1
 R25
-R70
 R71
+R72
 !i113 1
 R12
 R13
@@ -474,8 +474,8 @@ R2
 R3
 !i122 2169
 R4
-Z72 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/LEDs.vhd
-Z73 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/LEDs.vhd
+Z73 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/LEDs.vhd
+Z74 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/LEDs.vhd
 l0
 L5 1
 V82^IRfHNag^>;Yc>Z[nm>3
@@ -485,8 +485,8 @@ R7
 R18
 !i10b 1
 R39
-Z74 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/LEDs.vhd|
-Z75 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/LEDs.vhd|
+Z75 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/LEDs.vhd|
+Z76 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/LEDs.vhd|
 !i113 1
 R12
 R13
@@ -505,19 +505,19 @@ R7
 R18
 !i10b 1
 R39
-R74
 R75
+R76
 !i113 1
 R12
 R13
 Elogic_unit
-Z76 w1696418524
+Z77 w1696418524
 R2
 R3
 !i122 2170
 R4
-Z77 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/logic_unit.vhd
-Z78 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/logic_unit.vhd
+Z78 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/logic_unit.vhd
+Z79 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/logic_unit.vhd
 l0
 L4 1
 VfUEL39DQfcR_XLk:Hoe<f3
@@ -527,8 +527,8 @@ R7
 R18
 !i10b 1
 R39
-Z79 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/logic_unit.vhd|
-Z80 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/logic_unit.vhd|
+Z80 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/logic_unit.vhd|
+Z81 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/logic_unit.vhd|
 !i113 1
 R12
 R13
@@ -546,19 +546,19 @@ R7
 R18
 !i10b 1
 R39
-R79
 R80
+R81
 !i113 1
 R12
 R13
 Emultiplexer
-Z81 w1696418525
+Z82 w1696418525
 R2
 R3
 !i122 2171
 R4
-Z82 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/multiplexer.vhd
-Z83 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/multiplexer.vhd
+Z83 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/multiplexer.vhd
+Z84 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/multiplexer.vhd
 l0
 L4 1
 V4iH6`nZgBAHVia??bJk>G2
@@ -568,8 +568,8 @@ R7
 R18
 !i10b 1
 R39
-Z84 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/multiplexer.vhd|
-Z85 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/multiplexer.vhd|
+Z85 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/multiplexer.vhd|
+Z86 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/multiplexer.vhd|
 !i113 1
 R12
 R13
@@ -587,30 +587,30 @@ R7
 R18
 !i10b 1
 R39
-R84
 R85
+R86
 !i113 1
 R12
 R13
 Emux2x16
-Z86 w1696672128
+Z87 w1696672128
 R2
 R3
 !i122 2156
 R4
-Z87 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/mux2x16.vhd
-Z88 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/mux2x16.vhd
+Z88 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/mux2x16.vhd
+Z89 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/mux2x16.vhd
 l0
 L4 1
 VaHOL`3MF?g?d`[6<SJm^e1
 !s100 ]AkMHg3_OS9:k6cjVd[b:3
 R7
 32
-R69
+R70
 !i10b 1
-Z89 !s108 1696853724.000000
-Z90 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/mux2x16.vhd|
-Z91 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/mux2x16.vhd|
+Z90 !s108 1696853724.000000
+Z91 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/mux2x16.vhd|
+Z92 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/mux2x16.vhd|
 !i113 1
 R12
 R13
@@ -620,38 +620,38 @@ R3
 DEx4 work 7 mux2x16 0 22 aHOL`3MF?g?d`[6<SJm^e1
 !i122 2156
 l14
-Z92 L13 4
+Z93 L13 4
 VKeAM@Mi=oM?=Sg9EjYMll1
 !s100 MJG4DJJjRV`C[@Q9[RNJ22
 R7
 32
-R69
+R70
 !i10b 1
-R89
 R90
 R91
+R92
 !i113 1
 R12
 R13
 Emux2x32
-Z93 w1696672137
+Z94 w1696672137
 R2
 R3
 !i122 2157
 R4
-Z94 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/mux2x32.vhd
-Z95 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/mux2x32.vhd
+Z95 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/mux2x32.vhd
+Z96 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/mux2x32.vhd
 l0
 L4 1
 V5<9;E?13m3J1aF01KEAAR1
 !s100 Iab^5l@hZCaSi22IEjFiN0
 R7
 32
-R69
+R70
 !i10b 1
-R89
-Z96 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/mux2x32.vhd|
-Z97 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/mux2x32.vhd|
+R90
+Z97 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/mux2x32.vhd|
+Z98 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/mux2x32.vhd|
 !i113 1
 R12
 R13
@@ -661,38 +661,38 @@ R3
 DEx4 work 7 mux2x32 0 22 5<9;E?13m3J1aF01KEAAR1
 !i122 2157
 l14
-R92
+R93
 VZ[6KIQSLWAg?DFFn:;Nj_3
 !s100 Z?@JTHcmbUNbNcLf7OI;S1
 R7
 32
-R69
+R70
 !i10b 1
-R89
-R96
+R90
 R97
+R98
 !i113 1
 R12
 R13
 Emux2x5
-Z98 w1696672109
+Z99 w1696672109
 R2
 R3
 !i122 2155
 R4
-Z99 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/mux2x5.vhd
-Z100 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/mux2x5.vhd
+Z100 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/mux2x5.vhd
+Z101 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/mux2x5.vhd
 l0
 L4 1
 VW@GMgb]B=<MlVOlGRRM2i3
 !s100 A96?gLbg3Wafg>1JToSDm3
 R7
 32
-R69
+R70
 !i10b 1
-R89
-Z101 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/mux2x5.vhd|
-Z102 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/mux2x5.vhd|
+R90
+Z102 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/mux2x5.vhd|
+Z103 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/mux2x5.vhd|
 !i113 1
 R12
 R13
@@ -707,34 +707,34 @@ V999E68i9kZLhcdhIKmz6C1
 !s100 8dk4CVVa>^Yj8iJD_8^oS0
 R7
 32
-R69
+R70
 !i10b 1
-R89
-R101
+R90
 R102
+R103
 !i113 1
 R12
 R13
 Epc
-Z103 w1696775813
+Z104 w1696775813
 R1
 R2
 R3
 !i122 2158
 R4
-Z104 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/PC.vhd
-Z105 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/PC.vhd
+Z105 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/PC.vhd
+Z106 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/PC.vhd
 l0
 L5 1
 VL1PS=`^7Dom5JHh`oiS8z0
 !s100 Vz;DIYb[AY;g5[laVME<e3
 R7
 32
-R69
+R70
 !i10b 1
-R89
-Z106 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/PC.vhd|
-Z107 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/PC.vhd|
+R90
+Z107 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/PC.vhd|
+Z108 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/PC.vhd|
 !i113 1
 R12
 R13
@@ -750,34 +750,34 @@ VMQIi<d6igZCMQehJg0PFF2
 !s100 U@KcaIjNSJ4NE42gKWLEX0
 R7
 32
-R69
+R70
 !i10b 1
-R89
-R106
+R90
 R107
+R108
 !i113 1
 R12
 R13
 Eram
-Z108 w1696417009
+Z109 w1696858432
 R1
 R2
 R3
-!i122 2172
+!i122 2278
 R4
-Z109 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/RAM.vhd
-Z110 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/RAM.vhd
+Z110 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/RAM.vhd
+Z111 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/RAM.vhd
 l0
 L5 1
 VJiWAmLGUWmdVPB8L2QZ[D3
 !s100 9O>00CFElD4PLMkihiTWm3
 R7
 32
-Z111 !s110 1696853727
+Z112 !s110 1697013854
 !i10b 1
-R39
-Z112 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/RAM.vhd|
-Z113 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/RAM.vhd|
+Z113 !s108 1697013854.000000
+Z114 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/RAM.vhd|
+Z115 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/RAM.vhd|
 !i113 1
 R12
 R13
@@ -786,41 +786,41 @@ R1
 R2
 R3
 DEx4 work 3 ram 0 22 JiWAmLGUWmdVPB8L2QZ[D3
-!i122 2172
+!i122 2278
 l23
 L16 36
 V>fAVYMGRiBOc@eC03TA_`1
 !s100 8S1RD6<h_NIAg]4SiE<Pk2
 R7
 32
-R111
-!i10b 1
-R39
 R112
+!i10b 1
 R113
+R114
+R115
 !i113 1
 R12
 R13
 Eregister_file
-Z114 w1695816320
+Z116 w1695816320
 R1
 R2
 R3
 !i122 2173
 R4
-Z115 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/register_file.vhd
-Z116 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/register_file.vhd
+Z117 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/register_file.vhd
+Z118 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/register_file.vhd
 l0
 L5 1
 VhQYRZ<6ijZW2:hk46k4IZ2
 !s100 _;mToXbZzY:WVO^oMIJ;J3
 R7
 32
-R111
+Z119 !s110 1696853727
 !i10b 1
-Z117 !s108 1696853727.000000
-Z118 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/register_file.vhd|
-Z119 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/register_file.vhd|
+Z120 !s108 1696853727.000000
+Z121 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/register_file.vhd|
+Z122 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/register_file.vhd|
 !i113 1
 R12
 R13
@@ -836,33 +836,33 @@ V0WIbMacGUjW84C:Hc4jF<0
 !s100 9acmSORdA;A`mhI05nC>n2
 R7
 32
-R111
-!i10b 1
-R117
-R118
 R119
+!i10b 1
+R120
+R121
+R122
 !i113 1
 R12
 R13
 Erom
-Z120 w1696422241
+Z123 w1696422241
 R2
 R3
 !i122 2174
 R4
-Z121 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/ROM.vhd
-Z122 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/ROM.vhd
+Z124 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/ROM.vhd
+Z125 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/ROM.vhd
 l0
 L4 1
 VLD>LKJh0<<KfR_G::f?6B1
 !s100 LzhnA0@bLeKPHkcXf<L3g3
 R7
 32
-R111
+R119
 !i10b 1
-R117
-Z123 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/ROM.vhd|
-Z124 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/ROM.vhd|
+R120
+Z126 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/ROM.vhd|
+Z127 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/ROM.vhd|
 !i113 1
 R12
 R13
@@ -877,33 +877,33 @@ VF<Y=2f@;MKW8TZZn8=c6b0
 !s100 GBHVFPd9YKQXRL>:NR>Ue1
 R7
 32
-R111
+R119
 !i10b 1
-R117
-R123
-R124
+R120
+R126
+R127
 !i113 1
 R12
 R13
 Erom_block
-Z125 w1696250584
+Z128 w1696250584
 R2
 R3
 !i122 2175
 R4
-Z126 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/ROM_Block.vhd
-Z127 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/ROM_Block.vhd
+Z129 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/ROM_Block.vhd
+Z130 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/ROM_Block.vhd
 l0
 L42 1
 VCf[gZ]hQBZigaT1P:e9O01
 !s100 Fb1^C3b1G3KcM]0dFoPHV2
 R7
 32
-R111
+R119
 !i10b 1
-R117
-Z128 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/ROM_Block.vhd|
-Z129 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/ROM_Block.vhd|
+R120
+Z131 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/ROM_Block.vhd|
+Z132 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/ROM_Block.vhd|
 !i113 1
 R12
 R13
@@ -918,11 +918,11 @@ VZKBR7P0EaE;PJMf_Ho4411
 !s100 2O9W8o5<`cI7Pb0TBCEoL0
 R7
 32
-R111
+R119
 !i10b 1
-R117
-R128
-R129
+R120
+R131
+R132
 !i113 1
 R12
 R13
@@ -933,19 +933,19 @@ R2
 R3
 !i122 2176
 R4
-Z130 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/shift_unit.vhd
-Z131 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/shift_unit.vhd
+Z133 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/shift_unit.vhd
+Z134 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/shift_unit.vhd
 l0
 L5 1
 VoYz=ZP:Rg2U9Eb=ZGo>940
 !s100 C4@E7NN0:UB89P^MW405S0
 R7
 32
-R111
+R119
 !i10b 1
-R117
-Z132 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/shift_unit.vhd|
-Z133 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/shift_unit.vhd|
+R120
+Z135 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/shift_unit.vhd|
+Z136 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/shift_unit.vhd|
 !i113 1
 R12
 R13
@@ -961,11 +961,11 @@ VNOiOnk]_oCJDa8RHk=_0n1
 !s100 dC3RH_ngSNidhYJX18aNc2
 R7
 32
-R111
+R119
 !i10b 1
-R117
-R132
-R133
+R120
+R135
+R136
 !i113 1
 R12
 R13
@@ -976,10 +976,10 @@ R28
 R1
 R2
 R3
-!i122 2276
+!i122 2285
 R4
-Z134 8../testbench/tb_Controller.vhd
-Z135 F../testbench/tb_Controller.vhd
+Z137 8../testbench/tb_Controller.vhd
+Z138 F../testbench/tb_Controller.vhd
 l0
 L9 1
 V3E@KN_PfWzKDMi@e_IcgN1
@@ -988,9 +988,9 @@ R7
 31
 R31
 !i10b 1
-R32
-Z136 !s90 -reportprogress|300|-93|../testbench/tb_Controller.vhd|
-Z137 !s107 ../testbench/tb_Controller.vhd|
+Z139 !s108 1697014347.000000
+Z140 !s90 -reportprogress|300|-93|../testbench/tb_Controller.vhd|
+Z141 !s107 ../testbench/tb_Controller.vhd|
 !i113 1
 o-93
 R13
@@ -1000,32 +1000,32 @@ R28
 R1
 R2
 R3
-Z138 DEx4 work 13 tb_controller 0 22 3E@KN_PfWzKDMi@e_IcgN1
-!i122 2276
+Z142 DEx4 work 13 tb_controller 0 22 3E@KN_PfWzKDMi@e_IcgN1
+!i122 2285
 l102
-Z139 L15 417
-Z140 V3M1BHZOYlAHk5ZM;AdXib3
-Z141 !s100 _WkzDDFBPd:3LHMWS[AoW2
+Z143 L15 417
+Z144 V3M1BHZOYlAHk5ZM;AdXib3
+Z145 !s100 _WkzDDFBPd:3LHMWS[AoW2
 R7
 31
 R31
 !i10b 1
-R32
-R136
-R137
+R139
+R140
+R141
 !i113 1
 o-93
 R13
 Etb_extend
 R21
-Z142 DPx4 work 15 check_functions 0 22 <W1[dk2LN3hi[c?7kCXRb3
+Z146 DPx4 work 15 check_functions 0 22 <W1[dk2LN3hi[c?7kCXRb3
 R28
 R2
 R3
 !i122 2161
 R4
-Z143 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_Extend.vhd
-Z144 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_Extend.vhd
+Z147 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_Extend.vhd
+Z148 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_Extend.vhd
 l0
 L8 1
 Vaaa357Ec4Z]hSVLzLa]`V0
@@ -1035,13 +1035,13 @@ R7
 R8
 !i10b 1
 R9
-Z145 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_Extend.vhd|
-Z146 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_Extend.vhd|
+Z149 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_Extend.vhd|
+Z150 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_Extend.vhd|
 !i113 1
 R12
 R13
 Atestbench
-R142
+R146
 R28
 R2
 R3
@@ -1056,8 +1056,8 @@ R7
 R8
 !i10b 1
 R9
-R145
-R146
+R149
+R150
 !i113 1
 R12
 R13
@@ -1067,8 +1067,8 @@ R2
 R3
 !i122 2162
 R4
-Z147 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_GECKO.vhd
-Z148 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_GECKO.vhd
+Z151 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_GECKO.vhd
+Z152 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_GECKO.vhd
 l0
 L4 1
 V5Tbz7Kl=147iIIz>>A8Y[3
@@ -1078,13 +1078,13 @@ R7
 R8
 !i10b 1
 R9
-Z149 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_GECKO.vhd|
-Z150 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_GECKO.vhd|
+Z153 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_GECKO.vhd|
+Z154 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_GECKO.vhd|
 !i113 1
 R12
 R13
 Atestbench
-R65
+R66
 R2
 R3
 DEx4 work 8 tb_gecko 0 22 5Tbz7Kl=147iIIz>>A8Y[3
@@ -1098,21 +1098,21 @@ R7
 R8
 !i10b 1
 R9
-R149
-R150
+R153
+R154
 !i113 1
 R12
 R13
 Etb_ir
 R21
-R142
+R146
 R28
 R2
 R3
 !i122 2163
 R4
-Z151 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_IR.vhd
-Z152 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_IR.vhd
+Z155 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_IR.vhd
+Z156 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_IR.vhd
 l0
 L8 1
 VNa]DdS==`51QO9@9@NCYO3
@@ -1122,13 +1122,13 @@ R7
 R8
 !i10b 1
 R9
-Z153 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_IR.vhd|
-Z154 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_IR.vhd|
+Z157 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_IR.vhd|
+Z158 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_IR.vhd|
 !i113 1
 R12
 R13
 Atestbench
-R142
+R146
 R28
 R2
 R3
@@ -1143,21 +1143,21 @@ R7
 R8
 !i10b 1
 R9
-R153
-R154
+R157
+R158
 !i113 1
 R12
 R13
 Etb_pc
 R21
-R142
+R146
 R28
 R2
 R3
 !i122 2164
 R4
-Z155 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_PC.vhd
-Z156 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_PC.vhd
+Z159 8C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_PC.vhd
+Z160 FC:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_PC.vhd
 l0
 L8 1
 VZbiH9]DK4fmMF;^e8W7zF1
@@ -1167,13 +1167,13 @@ R7
 R8
 !i10b 1
 R9
-Z157 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_PC.vhd|
-Z158 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_PC.vhd|
+Z161 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_PC.vhd|
+Z162 !s107 C:/Users/hubne/Desktop/computer_architecture/lab_3/template/testbench/tb_PC.vhd|
 !i113 1
 R12
 R13
 Atestbench
-R142
+R146
 R28
 R2
 R3
@@ -1188,8 +1188,8 @@ R7
 R8
 !i10b 1
 R9
-R157
-R158
+R161
+R162
 !i113 1
 R12
 R13
