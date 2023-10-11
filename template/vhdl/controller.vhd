@@ -37,9 +37,11 @@ entity controller is
 end controller;
 
 architecture synth of controller is
-type states is (Fetch_1,Fetch_2,Decoder, R_OP, Store, Break, Load_1,Load_2,I_OP);
+
+type states is (Fetch_1,Fetch_2,Decoder, R_OP, Store, Break, Load_1,Load_2,I_OP, Branch, Call, Callr, Jmp, Jmpi);
 signal current_state: states := Fetch_1;
 signal next_state : states:=Fetch_2;
+
 begin
 	process(clk)
 	begin
@@ -109,21 +111,32 @@ begin
 				write       <= '0';
 				read        <= '0';
 				case op is
-				-- "010111" = 0x17
-					when "010111" =>
-						next_state <= Load_1;
+				
 					when "111010" =>
 					-- "110100  = 0x34"
 						if (opx = "110100") then
 							next_state <= Break;
+						elsif opx = "011101"then
+							next_state <= Callr;
+						elsif opx = "001101" or opx = "000101" then
+							next_state <= Jmp;
 						else 
 							next_state <= R_OP;
 						end if;
 						-- 0x15 = "010101"
-					when "010101" => 
-						next_state <= Store;
-					when others   =>
-						next_state <= I_OP;
+						-- "010111" = 0x17
+					when "010111" => next_state <= Load_1;
+					when "010101" => next_state <= Store;
+					when "000110" => next_state <= Branch;
+					when "001110" => next_state <= Branch;
+					when "010110" => next_state <= Branch;
+					when "011110" => next_state <= Branch;
+					when "100110" => next_state <= Branch;
+					when "101110" => next_state <= Branch;
+					when "110110" => next_state <= Branch;
+					when "000000" => next_state <= Call;
+					when "000001" => next_state <= Jmpi;
+					when others   => next_state <= I_OP;
 					end case;
 			when R_OP =>
 				branch_op   <= '0';
@@ -233,12 +246,100 @@ begin
 				write       <= '0';
 				read        <= '0';
 				next_state  <= Fetch_1;
+			when Branch => 
+				branch_op   <= '1';
+				imm_signed  <= '0';
+				ir_en       <= '0';
+				pc_add_imm  <= '1';
+				pc_en       <= '0';
+				pc_sel_a    <= '0';
+				pc_sel_imm  <= '0';
+				rf_wren     <= '0';
+				sel_addr    <= '0';
+				sel_b       <= '1';
+				sel_mem     <= '0';
+				sel_pc      <= '0';
+				sel_ra      <= '0';
+				sel_rC      <= '0';
+				write       <= '0';
+				read        <= '0';
+				next_state  <= Fetch_1;
+			when Call =>
+				branch_op   <= '0';
+				imm_signed  <= '0';
+				ir_en       <= '0';
+				pc_add_imm  <= '0';
+				pc_en       <= '1';
+				pc_sel_a    <= '0';
+				pc_sel_imm  <= '1';
+				rf_wren     <= '1';
+				sel_addr    <= '0';
+				sel_b       <= '0';
+				sel_mem     <= '0';
+				sel_pc      <= '1';
+				sel_ra      <= '1';
+				sel_rC      <= '0';
+				write       <= '0';
+				read        <= '0';
+				next_state  <= Fetch_1;
+			when Callr =>
+				branch_op   <= '0';
+				imm_signed  <= '0';
+				ir_en       <= '0';
+				pc_add_imm  <= '0';
+				pc_en       <= '1';
+				pc_sel_a    <= '1';
+				pc_sel_imm  <= '0';
+				rf_wren     <= '1';
+				sel_addr    <= '0';
+				sel_b       <= '0';
+				sel_mem     <= '0';
+				sel_pc      <= '1';
+				sel_ra      <= '1';
+				sel_rC      <= '0';
+				write       <= '0';
+				read        <= '0';
+				next_state  <= Fetch_1;
+			when Jmp =>
+				branch_op   <= '0';
+				imm_signed  <= '0';
+				ir_en       <= '0';
+				pc_add_imm  <= '0';
+				pc_en       <= '1';
+				pc_sel_a    <= '1';
+				pc_sel_imm  <= '0';
+				rf_wren     <= '0';
+				sel_addr    <= '0';
+				sel_b       <= '0';
+				sel_mem     <= '0';
+				sel_pc      <= '0';
+				sel_ra      <= '0';
+				sel_rC      <= '0';
+				write       <= '0';
+				read        <= '0';
+				next_state  <= Fetch_1;
+			when Jmpi =>
+				branch_op   <= '0';
+				imm_signed  <= '0';
+				ir_en       <= '0';
+				pc_add_imm  <= '0';
+				pc_en       <= '1';
+				pc_sel_a    <= '0';
+				pc_sel_imm  <= '1';
+				rf_wren     <= '0';
+				sel_addr    <= '0';
+				sel_b       <= '0';
+				sel_mem     <= '0';
+				sel_pc      <= '0';
+				sel_ra      <= '0';
+				sel_rC      <= '0';
+				write       <= '0';
+				read        <= '0';
+				next_state  <= Fetch_1;
 		end case;
 	end process;
 	process(opx, op)
 	begin
-		
-		
 		if(op = "111010") then
 			case (opx) is
 			when "110001" => op_alu <= "000000";
@@ -286,7 +387,7 @@ begin
 			when "010111" => op_alu <= "000000";
 			when "000101" => op_alu <= "000000";
 			when "010101" => op_alu <= "000000";
-			when "000110" => op_alu <= "000000";
+			when "000110" => op_alu <= "011100";
 			when "001110" => op_alu <= "011001";
 			when "010110" => op_alu <= "011010";
 			when "011110" => op_alu <= "011011";
