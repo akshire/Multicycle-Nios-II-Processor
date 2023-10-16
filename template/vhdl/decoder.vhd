@@ -21,9 +21,6 @@ architecture synth of decoder is
 	
 	CONSTANT BUTTONS_LB : std_logic_vector(15 downto 0) := x"2030"; --to_integer(unsigned(x"200c"));
     CONSTANT BUTTONS_HB : std_logic_vector(15 downto 0) := x"2034"; --to_integer(unsigned(x"200c"));
-
-    CONSTANT NOTHING_LB : std_logic_vector(15 downto 0) := x"2035"; 
-    CONSTANT NOTHING_HB : std_logic_vector(15 downto 0) := x"fffc";
     
     
     
@@ -37,7 +34,7 @@ begin
             cs_RAM <= '0';
             cs_ROM <= '1';
 			cs_buttons <= '0';
-        elsif address >= RAM_LB and RAM_LB >= address then
+        elsif address >= RAM_LB and RAM_HB >= address then
             cs_LEDS <= '0';
             cs_RAM <= '1';
             cs_ROM <= '0';
@@ -52,11 +49,6 @@ begin
 			cs_LEDS <= '0';
             cs_RAM <= '0';
             cs_ROM <= '0';
-        elsif address >= NOTHING_LB and NOTHING_HB >= address then
-            cs_LEDS <= '0';
-            cs_RAM <= '0';
-            cs_ROM <= '0';
-			cs_buttons <= '0';
 		else
 			cs_LEDS <= '0';
             cs_RAM <= '0';
