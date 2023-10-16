@@ -1,5 +1,5 @@
 MIF/HEX Update report for GECKO
-Mon Oct  9 15:37:50 2023
+Sat Oct 14 14:15:27 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -36,7 +36,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; MIF/HEX Update Summary                                        ;
 +-----------------------+---------------------------------------+
-; MIF/HEX Update Status ; Successful - Mon Oct  9 15:37:50 2023 ;
+; MIF/HEX Update Status ; Successful - Sat Oct 14 14:15:27 2023 ;
 ; Revision Name         ; GECKO                                 ;
 ; Top-level Entity Name ; GECKO                                 ;
 ; Family                ; Cyclone IV E                          ;
@@ -60,7 +60,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime MIF/HEX Update
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Mon Oct  9 15:37:49 2023
+    Info: Processing started: Sat Oct 14 14:15:26 2023
 Info: Command: quartus_cdb GECKO -c GECKO --update_mif
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (39024): Processed the following Memory Initialization File(s)
@@ -68,7 +68,7 @@ Info (39024): Processed the following Memory Initialization File(s)
     Info (39025): Processed Memory Initialization File C:/Users/hubne/Desktop/computer_architecture/lab_3/template/quartus/db/gecko.ram0_register_file_87c776fc.hdl.mif File: C:/Users/hubne/Desktop/computer_architecture/lab_3/template/quartus/db/gecko.ram0_register_file_87c776fc.hdl.mif Line: 0
 Info: Quartus Prime MIF/HEX Update was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4732 megabytes
-    Info: Processing ended: Mon Oct  9 15:37:50 2023
+    Info: Processing ended: Sat Oct 14 14:15:27 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 

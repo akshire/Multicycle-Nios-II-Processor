@@ -38,7 +38,7 @@ end controller;
 
 architecture synth of controller is
 
-type states is (Fetch_1,Fetch_2,Decoder, R_OP, Store, Break, Load_1,Load_2,I_OP, Branch, Call, Callr, Jmp, Jmpi);
+type states is (Fetch_1,Fetch_2,Decoder, R_OP, Store, Break, Load_1,Load_2,I_OP, Branch, Call, Callr, Jmp, Jmpi, UI_OP, RI_OP);
 signal current_state: states := Fetch_1;
 signal next_state : states:=Fetch_2;
 
@@ -113,18 +113,17 @@ begin
 				case op is
 				
 					when "111010" =>
-					-- "110100  = 0x34"
-						if (opx = "110100") then
-							next_state <= Break;
-						elsif opx = "011101"then
-							next_state <= Callr;
-						elsif opx = "001101" or opx = "000101" then
-							next_state <= Jmp;
-						else 
-							next_state <= R_OP;
-						end if;
-						-- 0x15 = "010101"
-						-- "010111" = 0x17
+						case opx is
+							when "110100" => next_state <= Break;
+							when "011101" => next_state <= Callr;
+							when "001101" => next_state <= Jmp;
+							when "000101" => next_state <= Jmp;
+							when "010010" => next_state <= RI_OP;
+							when "011010" => next_state <= RI_OP;
+							when "111010" => next_state <= RI_OP;
+							when "000010" => next_state <= RI_OP;
+							when others => next_state <= R_OP;
+						end case;
 					when "010111" => next_state <= Load_1;
 					when "010101" => next_state <= Store;
 					when "000110" => next_state <= Branch;
@@ -136,6 +135,12 @@ begin
 					when "110110" => next_state <= Branch;
 					when "000000" => next_state <= Call;
 					when "000001" => next_state <= Jmpi;
+					when "001100" => next_state <= UI_OP;
+					when "010100" => next_state <= UI_OP;
+					when "011100" => next_state <= UI_OP;
+					when "101000" => next_state <= UI_OP;
+					when "110000" => next_state <= UI_OP;
+		
 					when others   => next_state <= I_OP;
 					end case;
 			when R_OP =>
@@ -336,6 +341,43 @@ begin
 				write       <= '0';
 				read        <= '0';
 				next_state  <= Fetch_1;
+			when UI_OP =>
+				branch_op   <= '0';
+				imm_signed  <= '0';
+				ir_en       <= '0';
+				pc_add_imm  <= '0';
+				pc_en       <= '0';
+				pc_sel_a    <= '0';
+				pc_sel_imm  <= '1';
+				rf_wren     <= '1';
+				sel_addr    <= '0';
+				sel_b       <= '0';
+				sel_mem     <= '0';
+				sel_pc      <= '0';
+				sel_ra      <= '0';
+				sel_rC      <= '0';
+				write       <= '0';
+				read        <= '0';
+				next_state  <= Fetch_1;
+			when RI_OP =>
+				branch_op   <= '0';
+				imm_signed  <= '0';
+				ir_en       <= '0';
+				pc_add_imm  <= '0';
+				pc_en       <= '0';
+				pc_sel_a    <= '0';
+				pc_sel_imm  <= '0';
+				rf_wren     <= '1';
+				sel_addr    <= '0';
+				sel_b       <= '0';
+				sel_mem     <= '0';
+				sel_pc      <= '0';
+				sel_ra      <= '0';
+				sel_rC      <= '1';
+				write       <= '0';
+				read        <= '0';
+				next_state  <= Fetch_1;
+				
 		end case;
 	end process;
 	process(opx, op)
@@ -373,7 +415,7 @@ begin
 		else
 			case (op) is 
 			when "000100" => op_alu <= "000000";
-			when "001100" => op_alu <= "000000";
+			when "001100" => op_alu <= "100001";
 			when "010100" => op_alu <= "100010";
 			when "011100" => op_alu <= "100011";
 			-- DON T KNOW IF ITS TYPO IN THE DOC 

@@ -1,12 +1,19 @@
 
 State Machine - |GECKO|CPU:inst|controller:controller_0|current_state
-Name current_state.I_OP current_state.Load_2 current_state.Load_1 current_state.Break current_state.Store current_state.R_OP current_state.Decoder current_state.Fetch_2 current_state.Fetch_1 
-current_state.Fetch_1 0 0 0 0 0 0 0 0 0 
-current_state.Fetch_2 0 0 0 0 0 0 0 1 1 
-current_state.Decoder 0 0 0 0 0 0 1 0 1 
-current_state.R_OP 0 0 0 0 0 1 0 0 1 
-current_state.Store 0 0 0 0 1 0 0 0 1 
-current_state.Break 0 0 0 1 0 0 0 0 1 
-current_state.Load_1 0 0 1 0 0 0 0 0 1 
-current_state.Load_2 0 1 0 0 0 0 0 0 1 
-current_state.I_OP 1 0 0 0 0 0 0 0 1 
+Name current_state.RI_OP current_state.UI_OP current_state.Jmpi current_state.Jmp current_state.Callr current_state.Call current_state.Branch current_state.I_OP current_state.Load_2 current_state.Load_1 current_state.Break current_state.Store current_state.R_OP current_state.Decoder current_state.Fetch_2 current_state.Fetch_1 
+current_state.Fetch_1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.Fetch_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.Decoder 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.R_OP 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.Store 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.Break 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.Load_1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.Load_2 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.I_OP 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.Branch 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.Call 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.Callr 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.Jmp 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.Jmpi 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.UI_OP 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.RI_OP 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

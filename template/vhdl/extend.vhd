@@ -12,7 +12,7 @@ end extend;
 architecture synth of extend is
 
 constant IMM16_ZERO : std_logic_vector(15 downto 0) := x"0000";
-constant IMM16_ONE : std_logic_vector(15 downto 0) := x"1111";
+constant IMM16_ONE : std_logic_vector(15 downto 0) := x"ffff";
 signal signed_imm16 : std_logic_vector(15 downto 0);
 begin
 

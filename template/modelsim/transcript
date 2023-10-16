@@ -1,351 +1,52 @@
-# Compile of controller.vhd was successful.
-do test_PC_complete.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
-# vmap work work 
-# Modifying C:/Users/hubne/Desktop/computer_architecture/lab_3/template/modelsim/multicycle_niosII.mpf
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:20:23 on Oct 11,2023
-# vcom -reportprogress 300 -93 ../vhdl/PC.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity PC
-# -- Compiling architecture synth of PC
-# End time: 14:20:23 on Oct 11,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:20:23 on Oct 11,2023
-# vcom -reportprogress 300 -93 ../testbench/check_functions.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_textio
-# -- Compiling package check_functions
-# -- Compiling package body check_functions
-# -- Loading package check_functions
-# ** Warning: ../testbench/check_functions.vhd(49): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/check_functions.vhd(59): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# ** Warning: ../testbench/check_functions.vhd(65): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# ** Warning: ../testbench/check_functions.vhd(67): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# ** Warning: ../testbench/check_functions.vhd(68): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# ** Warning: ../testbench/check_functions.vhd(83): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/check_functions.vhd(93): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# ** Warning: ../testbench/check_functions.vhd(99): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# ** Warning: ../testbench/check_functions.vhd(102): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# ** Warning: ../testbench/check_functions.vhd(117): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/check_functions.vhd(127): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# ** Warning: ../testbench/check_functions.vhd(133): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# ** Warning: ../testbench/check_functions.vhd(135): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# ** Warning: ../testbench/check_functions.vhd(151): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# ** Warning: ../testbench/check_functions.vhd(167): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# ** Warning: ../testbench/check_functions.vhd(169): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# ** Warning: ../testbench/check_functions.vhd(170): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# End time: 14:20:23 on Oct 11,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 20
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:20:23 on Oct 11,2023
-# vcom -reportprogress 300 -93 ../testbench/tb_PC.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_textio
-# -- Loading package check_functions
-# -- Compiling entity tb_PC
-# -- Compiling architecture testbench of tb_PC
-# ** Warning: ../testbench/tb_PC.vhd(57): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/tb_PC.vhd(59): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# End time: 14:20:23 on Oct 11,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 2
-# vsim tb_PC 
-# Start time: 14:20:23 on Oct 11,2023
+vsim -gui work.tb_extend
+# vsim -gui work.tb_extend 
+# Start time: 14:51:04 on Oct 14,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.std_logic_textio(body)
 # Loading work.check_functions(body)
-# Loading work.tb_pc(testbench)
-# Loading ieee.numeric_std(body)
-# Loading work.pc(fast)
-# - Program Counter test:
-# - reset_n test...
-# ** Error: Unexpected output value for addr
-#    Time: 32500 ps  Iteration: 1  Instance: /tb_pc
-# - sel_imm test...
-# - sel_a test...
-# - add_imm test...
-# ** Error: Unexpected output value for addr
-#    Time: 47500 ps  Iteration: 1  Instance: /tb_pc
-# ** Error: (vsim-86) Argument value -80 is not in bounds of subtype NATURAL.
-#    Time: 50 ns  Iteration: 1  Instance: /tb_pc/pc_0
-# ** Error: Unexpected output value for addr
-#    Time: 52500 ps  Iteration: 1  Instance: /tb_pc
-# - enable test...
-# ** Error: Unexpected output value for addr
-#    Time: 57500 ps  Iteration: 1  Instance: /tb_pc
-# - pc+4 test...
-# ** Error: Unexpected output value for addr
-#    Time: 62500 ps  Iteration: 1  Instance: /tb_pc
-# ** Error: Unexpected output value for addr
-#    Time: 67500 ps  Iteration: 1  Instance: /tb_pc
-# ** Error: Unexpected output value for addr
-#    Time: 72500 ps  Iteration: 1  Instance: /tb_pc
+# Loading work.tb_extend(testbench)
+# Loading work.extend(fast)
+add wave sim:/tb_extend/*
+# Load canceled
+restart -f; run -all;
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# - Extend unit test:
+# ** Error: Unexpected output value for imm32
+#    Time: 17500 ps  Iteration: 1  Instance: /tb_extend
 # ===================================================================
 # Errors encountered during simulation. Refer to the report.txt file.
 # ===================================================================
-do test_Controller.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
-# vmap work work 
-# Modifying C:/Users/hubne/Desktop/computer_architecture/lab_3/template/modelsim/multicycle_niosII.mpf
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:23:08 on Oct 11,2023
-# vcom -reportprogress 300 -93 ../vhdl/controller.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity controller
-# -- Compiling architecture synth of controller
-# End time: 14:23:08 on Oct 11,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:23:08 on Oct 11,2023
-# vcom -reportprogress 300 -93 ../testbench/check_functions.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_textio
-# -- Compiling package check_functions
-# -- Compiling package body check_functions
-# -- Loading package check_functions
-# ** Warning: ../testbench/check_functions.vhd(49): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/check_functions.vhd(59): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# ** Warning: ../testbench/check_functions.vhd(65): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# ** Warning: ../testbench/check_functions.vhd(67): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# ** Warning: ../testbench/check_functions.vhd(68): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# ** Warning: ../testbench/check_functions.vhd(83): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/check_functions.vhd(93): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# ** Warning: ../testbench/check_functions.vhd(99): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# ** Warning: ../testbench/check_functions.vhd(102): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# ** Warning: ../testbench/check_functions.vhd(117): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/check_functions.vhd(127): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# ** Warning: ../testbench/check_functions.vhd(133): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# ** Warning: ../testbench/check_functions.vhd(135): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# ** Warning: ../testbench/check_functions.vhd(151): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# ** Warning: ../testbench/check_functions.vhd(167): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# ** Warning: ../testbench/check_functions.vhd(169): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# ** Warning: ../testbench/check_functions.vhd(170): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# End time: 14:23:08 on Oct 11,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 20
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:23:08 on Oct 11,2023
-# vcom -reportprogress 300 -93 ../testbench/tb_Controller.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Loading package check_functions
-# -- Compiling entity tb_Controller
-# -- Compiling architecture testbench of tb_Controller
-# ** Warning: ../testbench/tb_Controller.vhd(129): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/tb_Controller.vhd(130): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# End time: 14:23:08 on Oct 11,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 2
-# End time: 14:23:08 on Oct 11,2023, Elapsed time: 0:02:45
-# Errors: 8, Warnings: 2
-# vsim tb_Controller -Gtext_in=Controller/in.txt 
-# Start time: 14:23:08 on Oct 11,2023
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.std_logic_textio(body)
-# Loading work.check_functions(body)
-# Loading work.tb_controller(testbench)
-# Loading work.controller(fast)
-# -=Controller test:======================================================
-# --R_OP test:------------------------------------------------------------
-# --I_OP test:------------------------------------------------------------
-# --LOAD test:------------------------------------------------------------
-# --STORE test:-----------------------------------------------------------
-# --BRANCH test:----------------------------------------------------------
-# --CALL test:------------------------------------------------------------
-# ** Error: Unexpected output value for pc_en
-#    Time: 267500 ps  Iteration: 1  Instance: /tb_controller
-# --CALLR test:-----------------------------------------------------------
-# ** Error: Unexpected output value for pc_sel_a
-#    Time: 287500 ps  Iteration: 1  Instance: /tb_controller
-# ** Error: Unexpected output value for pc_en
-#    Time: 287500 ps  Iteration: 1  Instance: /tb_controller
-# --JMP test:-------------------------------------------------------------
-# --JMPI test:--------------------------------------------------
-# --BREAK test:-----------------------------------------------------------
+restart -f; run -all;
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# - Extend unit test:
+# ** Error: Unexpected output value for imm32
+#    Time: 17500 ps  Iteration: 1  Instance: /tb_extend
 # ===================================================================
 # Errors encountered during simulation. Refer to the report.txt file.
 # ===================================================================
-# Compile of controller.vhd was successful.
-do test_Controller.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
-# vmap work work 
-# Modifying C:/Users/hubne/Desktop/computer_architecture/lab_3/template/modelsim/multicycle_niosII.mpf
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:25:04 on Oct 11,2023
-# vcom -reportprogress 300 -93 ../vhdl/controller.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity controller
-# -- Compiling architecture synth of controller
-# End time: 14:25:04 on Oct 11,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:25:04 on Oct 11,2023
-# vcom -reportprogress 300 -93 ../testbench/check_functions.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_textio
-# -- Compiling package check_functions
-# -- Compiling package body check_functions
-# -- Loading package check_functions
-# ** Warning: ../testbench/check_functions.vhd(49): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/check_functions.vhd(59): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# ** Warning: ../testbench/check_functions.vhd(65): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# ** Warning: ../testbench/check_functions.vhd(67): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# ** Warning: ../testbench/check_functions.vhd(68): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# ** Warning: ../testbench/check_functions.vhd(83): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/check_functions.vhd(93): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# ** Warning: ../testbench/check_functions.vhd(99): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# ** Warning: ../testbench/check_functions.vhd(102): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# ** Warning: ../testbench/check_functions.vhd(117): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/check_functions.vhd(127): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# ** Warning: ../testbench/check_functions.vhd(133): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# ** Warning: ../testbench/check_functions.vhd(135): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# ** Warning: ../testbench/check_functions.vhd(151): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# ** Warning: ../testbench/check_functions.vhd(167): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# ** Warning: ../testbench/check_functions.vhd(169): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# ** Warning: ../testbench/check_functions.vhd(170): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# End time: 14:25:05 on Oct 11,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 20
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:25:05 on Oct 11,2023
-# vcom -reportprogress 300 -93 ../testbench/tb_Controller.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_textio
-# -- Loading package check_functions
-# -- Compiling entity tb_Controller
-# -- Compiling architecture testbench of tb_Controller
-# ** Warning: ../testbench/tb_Controller.vhd(129): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/tb_Controller.vhd(130): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# End time: 14:25:05 on Oct 11,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 2
-# End time: 14:25:05 on Oct 11,2023, Elapsed time: 0:01:57
-# Errors: 3, Warnings: 2
-# vsim tb_Controller -Gtext_in=Controller/in.txt 
-# Start time: 14:25:05 on Oct 11,2023
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.std_logic_textio(body)
-# Loading work.check_functions(body)
-# Loading work.tb_controller(testbench)
-# Loading work.controller(fast)
-# -=Controller test:======================================================
-# --R_OP test:------------------------------------------------------------
-# --I_OP test:------------------------------------------------------------
-# --LOAD test:------------------------------------------------------------
-# --STORE test:-----------------------------------------------------------
-# --BRANCH test:----------------------------------------------------------
-# --CALL test:------------------------------------------------------------
-# --CALLR test:-----------------------------------------------------------
-# --JMP test:-------------------------------------------------------------
-# --JMPI test:--------------------------------------------------
-# --BREAK test:-----------------------------------------------------------
+# Compile of extend.vhd was successful.
+restart -f; run -all;
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.extend(fast)
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# - Extend unit test:
 # ===================================================================
 # Simulation is successful
 # ===================================================================
-do test_PC_complete.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
-# vmap work work 
-# Modifying C:/Users/hubne/Desktop/computer_architecture/lab_3/template/modelsim/multicycle_niosII.mpf
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:32:03 on Oct 11,2023
-# vcom -reportprogress 300 -93 ../vhdl/PC.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity PC
-# -- Compiling architecture synth of PC
-# End time: 14:32:03 on Oct 11,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:32:03 on Oct 11,2023
-# vcom -reportprogress 300 -93 ../testbench/check_functions.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_textio
-# -- Compiling package check_functions
-# -- Compiling package body check_functions
-# -- Loading package check_functions
-# ** Warning: ../testbench/check_functions.vhd(49): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/check_functions.vhd(59): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# ** Warning: ../testbench/check_functions.vhd(65): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# ** Warning: ../testbench/check_functions.vhd(67): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# ** Warning: ../testbench/check_functions.vhd(68): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# ** Warning: ../testbench/check_functions.vhd(83): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/check_functions.vhd(93): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# ** Warning: ../testbench/check_functions.vhd(99): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# ** Warning: ../testbench/check_functions.vhd(102): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# ** Warning: ../testbench/check_functions.vhd(117): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/check_functions.vhd(127): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# ** Warning: ../testbench/check_functions.vhd(133): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# ** Warning: ../testbench/check_functions.vhd(135): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# ** Warning: ../testbench/check_functions.vhd(151): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# ** Warning: ../testbench/check_functions.vhd(167): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# ** Warning: ../testbench/check_functions.vhd(169): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# ** Warning: ../testbench/check_functions.vhd(170): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# End time: 14:32:03 on Oct 11,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 20
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:32:03 on Oct 11,2023
-# vcom -reportprogress 300 -93 ../testbench/tb_PC.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_textio
-# -- Loading package check_functions
-# -- Compiling entity tb_PC
-# -- Compiling architecture testbench of tb_PC
-# ** Warning: ../testbench/tb_PC.vhd(57): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/tb_PC.vhd(59): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# End time: 14:32:03 on Oct 11,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 2
-# End time: 14:32:04 on Oct 11,2023, Elapsed time: 0:06:59
+vsim -gui work.tb_pc
+# End time: 14:53:56 on Oct 14,2023, Elapsed time: 0:02:52
 # Errors: 0, Warnings: 1
-# vsim tb_PC 
-# Start time: 14:32:04 on Oct 11,2023
+# vsim -gui work.tb_pc 
+# Start time: 14:53:56 on Oct 14,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -354,204 +55,104 @@ do test_PC_complete.do
 # Loading work.tb_pc(testbench)
 # Loading ieee.numeric_std(body)
 # Loading work.pc(fast)
+add wave sim:/tb_pc/*
+# Load canceled
+add wave sim:/tb_pc/*
+add wave sim:/tb_pc/*
+restart -f; run -all;
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
 # - Program Counter test:
 # - reset_n test...
-# ** Error: Unexpected output value for addr
-#    Time: 32500 ps  Iteration: 1  Instance: /tb_pc
 # - sel_imm test...
 # - sel_a test...
 # - add_imm test...
-# ** Error: Unexpected output value for addr
-#    Time: 47500 ps  Iteration: 1  Instance: /tb_pc
-# ** Error: (vsim-86) Argument value -80 is not in bounds of subtype NATURAL.
-#    Time: 50 ns  Iteration: 1  Instance: /tb_pc/pc_0
-# ** Error: Unexpected output value for addr
-#    Time: 52500 ps  Iteration: 1  Instance: /tb_pc
 # - enable test...
-# ** Error: Unexpected output value for addr
-#    Time: 57500 ps  Iteration: 1  Instance: /tb_pc
 # - pc+4 test...
-# ** Error: Unexpected output value for addr
-#    Time: 62500 ps  Iteration: 1  Instance: /tb_pc
-# ** Error: Unexpected output value for addr
-#    Time: 67500 ps  Iteration: 1  Instance: /tb_pc
-# ** Error: Unexpected output value for addr
-#    Time: 72500 ps  Iteration: 1  Instance: /tb_pc
 # ===================================================================
-# Errors encountered during simulation. Refer to the report.txt file.
+# Simulation is successful
 # ===================================================================
-do test_PC_complete.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
-# vmap work work 
-# Modifying C:/Users/hubne/Desktop/computer_architecture/lab_3/template/modelsim/multicycle_niosII.mpf
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:37:33 on Oct 11,2023
-# vcom -reportprogress 300 -93 ../vhdl/PC.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity PC
-# -- Compiling architecture synth of PC
-# End time: 14:37:33 on Oct 11,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:37:33 on Oct 11,2023
-# vcom -reportprogress 300 -93 ../testbench/check_functions.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_textio
-# -- Compiling package check_functions
-# -- Compiling package body check_functions
-# -- Loading package check_functions
-# ** Warning: ../testbench/check_functions.vhd(49): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/check_functions.vhd(59): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# ** Warning: ../testbench/check_functions.vhd(65): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# ** Warning: ../testbench/check_functions.vhd(67): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# ** Warning: ../testbench/check_functions.vhd(68): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# ** Warning: ../testbench/check_functions.vhd(83): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/check_functions.vhd(93): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# ** Warning: ../testbench/check_functions.vhd(99): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# ** Warning: ../testbench/check_functions.vhd(102): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# ** Warning: ../testbench/check_functions.vhd(117): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/check_functions.vhd(127): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# ** Warning: ../testbench/check_functions.vhd(133): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# ** Warning: ../testbench/check_functions.vhd(135): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# ** Warning: ../testbench/check_functions.vhd(151): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# ** Warning: ../testbench/check_functions.vhd(167): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# ** Warning: ../testbench/check_functions.vhd(169): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# ** Warning: ../testbench/check_functions.vhd(170): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# End time: 14:37:33 on Oct 11,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 20
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:37:33 on Oct 11,2023
-# vcom -reportprogress 300 -93 ../testbench/tb_PC.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_textio
-# -- Loading package check_functions
-# -- Compiling entity tb_PC
-# -- Compiling architecture testbench of tb_PC
-# ** Warning: ../testbench/tb_PC.vhd(57): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/tb_PC.vhd(59): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# End time: 14:37:33 on Oct 11,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 2
-# End time: 14:37:34 on Oct 11,2023, Elapsed time: 0:05:30
-# Errors: 8, Warnings: 1
-# vsim tb_PC 
-# Start time: 14:37:34 on Oct 11,2023
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_textio(body)
-# Loading work.check_functions(body)
-# Loading work.tb_pc(testbench)
-# Loading ieee.numeric_std(body)
-# Loading work.pc(fast)
+# Compile of extend.vhd was successful.
+restart -f; run -all;
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
 # - Program Counter test:
 # - reset_n test...
-# ** Error: Unexpected output value for addr
-#    Time: 32500 ps  Iteration: 1  Instance: /tb_pc
 # - sel_imm test...
 # - sel_a test...
-# ** Error: (vsim-86) Argument value -21936 is not in bounds of subtype NATURAL.
-#    Time: 40 ns  Iteration: 1  Instance: /tb_pc/pc_0
-# ** Error: Unexpected output value for addr
-#    Time: 42500 ps  Iteration: 1  Instance: /tb_pc
 # - add_imm test...
-# ** Error: Unexpected output value for addr
-#    Time: 47500 ps  Iteration: 1  Instance: /tb_pc
-# ** Error: (vsim-86) Argument value -80 is not in bounds of subtype NATURAL.
-#    Time: 50 ns  Iteration: 1  Instance: /tb_pc/pc_0
-# ** Error: Unexpected output value for addr
-#    Time: 52500 ps  Iteration: 1  Instance: /tb_pc
 # - enable test...
-# ** Error: Unexpected output value for addr
-#    Time: 57500 ps  Iteration: 1  Instance: /tb_pc
 # - pc+4 test...
-# ** Error: Unexpected output value for addr
-#    Time: 62500 ps  Iteration: 1  Instance: /tb_pc
-# ** Error: Unexpected output value for addr
-#    Time: 67500 ps  Iteration: 1  Instance: /tb_pc
-# ** Error: Unexpected output value for addr
-#    Time: 72500 ps  Iteration: 1  Instance: /tb_pc
 # ===================================================================
-# Errors encountered during simulation. Refer to the report.txt file.
+# Simulation is successful
 # ===================================================================
-# A time value could not be extracted from the current line
+# Compile of extend.vhd was successful.
+restart -f; run -all;
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# - Program Counter test:
+# - reset_n test...
+# - sel_imm test...
+# - sel_a test...
+# - add_imm test...
+# - enable test...
+# - pc+4 test...
+# ===================================================================
+# Simulation is successful
+# ===================================================================
+restart -f; run -all;
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# - Program Counter test:
+# - reset_n test...
+# - sel_imm test...
+# - sel_a test...
+# - add_imm test...
+# - enable test...
+# - pc+4 test...
+# ===================================================================
+# Simulation is successful
+# ===================================================================
 # Compile of PC.vhd was successful.
-do test_PC_complete.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
-# vmap work work 
-# Modifying C:/Users/hubne/Desktop/computer_architecture/lab_3/template/modelsim/multicycle_niosII.mpf
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:44:57 on Oct 11,2023
-# vcom -reportprogress 300 -93 ../vhdl/PC.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity PC
-# -- Compiling architecture synth of PC
-# End time: 14:44:58 on Oct 11,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:44:58 on Oct 11,2023
-# vcom -reportprogress 300 -93 ../testbench/check_functions.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_textio
-# -- Compiling package check_functions
-# -- Compiling package body check_functions
-# -- Loading package check_functions
-# ** Warning: ../testbench/check_functions.vhd(49): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/check_functions.vhd(59): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# ** Warning: ../testbench/check_functions.vhd(65): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# ** Warning: ../testbench/check_functions.vhd(67): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# ** Warning: ../testbench/check_functions.vhd(68): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# ** Warning: ../testbench/check_functions.vhd(83): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/check_functions.vhd(93): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# ** Warning: ../testbench/check_functions.vhd(99): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# ** Warning: ../testbench/check_functions.vhd(102): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# ** Warning: ../testbench/check_functions.vhd(117): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/check_functions.vhd(127): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# ** Warning: ../testbench/check_functions.vhd(133): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# ** Warning: ../testbench/check_functions.vhd(135): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# ** Warning: ../testbench/check_functions.vhd(151): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# ** Warning: ../testbench/check_functions.vhd(167): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# ** Warning: ../testbench/check_functions.vhd(169): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# ** Warning: ../testbench/check_functions.vhd(170): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# End time: 14:44:58 on Oct 11,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 20
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:44:58 on Oct 11,2023
-# vcom -reportprogress 300 -93 ../testbench/tb_PC.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_textio
-# -- Loading package check_functions
-# -- Compiling entity tb_PC
-# -- Compiling architecture testbench of tb_PC
-# ** Warning: ../testbench/tb_PC.vhd(57): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/tb_PC.vhd(59): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# End time: 14:44:58 on Oct 11,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 2
-# End time: 14:44:58 on Oct 11,2023, Elapsed time: 0:07:24
-# Errors: 10, Warnings: 2
-# vsim tb_PC 
-# Start time: 14:44:58 on Oct 11,2023
+restart -f; run -all;
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.pc(fast)
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# - Program Counter test:
+# - reset_n test...
+# - sel_imm test...
+# - sel_a test...
+# - add_imm test...
+# - enable test...
+# - pc+4 test...
+# ===================================================================
+# Simulation is successful
+# ===================================================================
+vsim -gui work.tb_extend
+# End time: 15:19:02 on Oct 14,2023, Elapsed time: 0:25:06
+# Errors: 0, Warnings: 1
+# vsim -gui work.tb_extend 
+# Start time: 15:19:02 on Oct 14,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_extend(testbench)
+# Loading work.extend(fast)
+vsim -gui work.tb_pc
+# End time: 15:19:17 on Oct 14,2023, Elapsed time: 0:00:15
+# Errors: 0, Warnings: 1
+# vsim -gui work.tb_pc 
+# Start time: 15:19:17 on Oct 14,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -560,6 +161,55 @@ do test_PC_complete.do
 # Loading work.tb_pc(testbench)
 # Loading ieee.numeric_std(body)
 # Loading work.pc(fast)
+add wave sim:/tb_pc/*
+restart -f; run -all;
+# - Program Counter test:
+# - reset_n test...
+# - sel_imm test...
+# - sel_a test...
+# - add_imm test...
+# - enable test...
+# - pc+4 test...
+# ===================================================================
+# Simulation is successful
+# ===================================================================
+# Compile of PC.vhd was successful with warnings.
+restart -f; run -all;
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.pc(fast)
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# - Program Counter test:
+# ** Fatal: (vsim-3738) (vcom-1144) Value -30 (of type std.STANDARD.NATURAL) is out of range 0 to 2147483647.
+#    Time: 10 ns  Iteration: 1  Process: /tb_pc/pc_0/line__23 File: C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/PC.vhd Line: 31
+# Fatal error in Process line__23 at C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/PC.vhd line 31
+# 
+# HDL call sequence:
+# Stopped at C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/PC.vhd 31 Process line__23
+# 
+# Compile of PC.vhd was successful with warnings.
+restart -f; run -all;
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.pc(fast)
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# - Program Counter test:
+# ** Fatal: (vsim-3738) (vcom-1144) Value -30 (of type std.STANDARD.NATURAL) is out of range 0 to 2147483647.
+#    Time: 10 ns  Iteration: 1  Process: /tb_pc/pc_0/line__23 File: C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/PC.vhd Line: 31
+# Fatal error in Process line__23 at C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/PC.vhd line 31
+# 
+# HDL call sequence:
+# Stopped at C:/Users/hubne/Desktop/computer_architecture/lab_3/template/vhdl/PC.vhd 31 Process line__23
+# 
+# Compile of PC.vhd was successful.
+restart -f; run -all;
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.pc(fast)
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
 # - Program Counter test:
 # ** Error: Unexpected output value for addr
 #    Time: 12500 ps  Iteration: 1  Instance: /tb_pc
@@ -580,6 +230,8 @@ do test_PC_complete.do
 # ** Error: Unexpected output value for addr
 #    Time: 52500 ps  Iteration: 1  Instance: /tb_pc
 # - enable test...
+# ** Error: Unexpected output value for addr
+#    Time: 57500 ps  Iteration: 1  Instance: /tb_pc
 # - pc+4 test...
 # ** Error: Unexpected output value for addr
 #    Time: 62500 ps  Iteration: 1  Instance: /tb_pc
@@ -590,87 +242,126 @@ do test_PC_complete.do
 # ===================================================================
 # Errors encountered during simulation. Refer to the report.txt file.
 # ===================================================================
+# Compile of PC.vhd failed with 1 errors.
 # Compile of PC.vhd was successful.
-do test_PC_complete.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
-# vmap work work 
-# Modifying C:/Users/hubne/Desktop/computer_architecture/lab_3/template/modelsim/multicycle_niosII.mpf
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:48:50 on Oct 11,2023
-# vcom -reportprogress 300 -93 ../vhdl/PC.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity PC
-# -- Compiling architecture synth of PC
-# End time: 14:48:50 on Oct 11,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:48:50 on Oct 11,2023
-# vcom -reportprogress 300 -93 ../testbench/check_functions.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_textio
-# -- Compiling package check_functions
-# -- Compiling package body check_functions
-# -- Loading package check_functions
-# ** Warning: ../testbench/check_functions.vhd(49): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/check_functions.vhd(59): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# ** Warning: ../testbench/check_functions.vhd(65): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# ** Warning: ../testbench/check_functions.vhd(67): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# ** Warning: ../testbench/check_functions.vhd(68): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# ** Warning: ../testbench/check_functions.vhd(83): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/check_functions.vhd(93): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# ** Warning: ../testbench/check_functions.vhd(99): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# ** Warning: ../testbench/check_functions.vhd(102): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# ** Warning: ../testbench/check_functions.vhd(117): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/check_functions.vhd(127): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# ** Warning: ../testbench/check_functions.vhd(133): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# ** Warning: ../testbench/check_functions.vhd(135): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# ** Warning: ../testbench/check_functions.vhd(151): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# ** Warning: ../testbench/check_functions.vhd(167): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# ** Warning: ../testbench/check_functions.vhd(169): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# ** Warning: ../testbench/check_functions.vhd(170): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# End time: 14:48:51 on Oct 11,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 20
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:48:51 on Oct 11,2023
-# vcom -reportprogress 300 -93 ../testbench/tb_PC.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_textio
-# -- Loading package check_functions
-# -- Compiling entity tb_PC
-# -- Compiling architecture testbench of tb_PC
-# ** Warning: ../testbench/tb_PC.vhd(57): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# ** Warning: ../testbench/tb_PC.vhd(59): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# End time: 14:48:51 on Oct 11,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 2
-# End time: 14:48:51 on Oct 11,2023, Elapsed time: 0:03:53
-# Errors: 10, Warnings: 2
-# vsim tb_PC 
-# Start time: 14:48:51 on Oct 11,2023
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_textio(body)
-# Loading work.check_functions(body)
-# Loading work.tb_pc(testbench)
-# Loading ieee.numeric_std(body)
+restart -f; run -all;
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # Loading work.pc(fast)
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
 # - Program Counter test:
+# ** Note: -2147483648
+#    Time: 0 ps  Iteration: 0  Instance: /tb_pc/pc_0
+# ** Note: 0
+#    Time: 5 ns  Iteration: 2  Instance: /tb_pc/pc_0
 # - reset_n test...
+# ** Note: 4
+#    Time: 15 ns  Iteration: 2  Instance: /tb_pc/pc_0
+# ** Note: 32767
+#    Time: 20 ns  Iteration: 2  Instance: /tb_pc/pc_0
+# ** Note: 4
+#    Time: 30 ns  Iteration: 2  Instance: /tb_pc/pc_0
 # - sel_imm test...
+# ** Note: 22136
+#    Time: 35 ns  Iteration: 2  Instance: /tb_pc/pc_0
 # - sel_a test...
+# ** Note: 21456
+#    Time: 40 ns  Iteration: 2  Instance: /tb_pc/pc_0
 # - add_imm test...
+# ** Note: 160
+#    Time: 45 ns  Iteration: 2  Instance: /tb_pc/pc_0
+# ** Note: -80
+#    Time: 50 ns  Iteration: 2  Instance: /tb_pc/pc_0
 # - enable test...
+# ** Note: 0
+#    Time: 55 ns  Iteration: 2  Instance: /tb_pc/pc_0
+# - pc+4 test...
+# ===================================================================
+# Simulation is successful
+# ===================================================================
+# Compile of PC.vhd was successful.
+restart -f; run -all;
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.pc(fast)
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# - Program Counter test:
+# ** Note: -2147483648
+#    Time: 0 ps  Iteration: 0  Instance: /tb_pc/pc_0
+# ** Note: 0
+#    Time: 5 ns  Iteration: 2  Instance: /tb_pc/pc_0
+# - reset_n test...
+# ** Note: 4
+#    Time: 15 ns  Iteration: 2  Instance: /tb_pc/pc_0
+# ** Note: 32767
+#    Time: 20 ns  Iteration: 2  Instance: /tb_pc/pc_0
+# ** Note: 4
+#    Time: 30 ns  Iteration: 2  Instance: /tb_pc/pc_0
+# - sel_imm test...
+# ** Note: 22136
+#    Time: 35 ns  Iteration: 2  Instance: /tb_pc/pc_0
+# - sel_a test...
+# ** Note: 21456
+#    Time: 40 ns  Iteration: 2  Instance: /tb_pc/pc_0
+# - add_imm test...
+# ** Note: 160
+#    Time: 45 ns  Iteration: 2  Instance: /tb_pc/pc_0
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 50 ns  Iteration: 1  Instance: /tb_pc/pc_0
+# ** Note: 65456
+#    Time: 50 ns  Iteration: 2  Instance: /tb_pc/pc_0
+# - enable test...
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 55 ns  Iteration: 1  Instance: /tb_pc/pc_0
+# ** Note: 0
+#    Time: 55 ns  Iteration: 2  Instance: /tb_pc/pc_0
+# - pc+4 test...
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 60 ns  Iteration: 1  Instance: /tb_pc/pc_0
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 65 ns  Iteration: 1  Instance: /tb_pc/pc_0
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 70 ns  Iteration: 1  Instance: /tb_pc/pc_0
+# ===================================================================
+# Simulation is successful
+# ===================================================================
+# Compile of PC.vhd failed with 2 errors.
+# Compile of PC.vhd failed with 1 errors.
+# Compile of PC.vhd was successful.
+restart -f; run -all;
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.pc(fast)
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# - Program Counter test:
+# ** Note: -2147483648
+#    Time: 0 ps  Iteration: 0  Instance: /tb_pc/pc_0
+# ** Note: 0
+#    Time: 5 ns  Iteration: 2  Instance: /tb_pc/pc_0
+# - reset_n test...
+# ** Note: 4
+#    Time: 15 ns  Iteration: 2  Instance: /tb_pc/pc_0
+# ** Note: 32767
+#    Time: 20 ns  Iteration: 2  Instance: /tb_pc/pc_0
+# ** Note: 4
+#    Time: 30 ns  Iteration: 2  Instance: /tb_pc/pc_0
+# - sel_imm test...
+# ** Note: 22136
+#    Time: 35 ns  Iteration: 2  Instance: /tb_pc/pc_0
+# - sel_a test...
+# ** Note: 21456
+#    Time: 40 ns  Iteration: 2  Instance: /tb_pc/pc_0
+# - add_imm test...
+# ** Note: 160
+#    Time: 45 ns  Iteration: 2  Instance: /tb_pc/pc_0
+# ** Note: -80
+#    Time: 50 ns  Iteration: 2  Instance: /tb_pc/pc_0
+# - enable test...
+# ** Note: 0
+#    Time: 55 ns  Iteration: 2  Instance: /tb_pc/pc_0
 # - pc+4 test...
 # ===================================================================
 # Simulation is successful

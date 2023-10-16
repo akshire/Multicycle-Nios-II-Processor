@@ -1,5 +1,5 @@
 Assembler report for GECKO
-Mon Oct  9 15:37:06 2023
+Sat Oct 14 14:15:29 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Oct  9 15:37:06 2023 ;
+; Assembler Status      ; Successful - Sat Oct 14 14:15:29 2023 ;
 ; Revision Name         ; GECKO                                 ;
 ; Top-level Entity Name ; GECKO                                 ;
 ; Family                ; Cyclone IV E                          ;
@@ -93,8 +93,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+----------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                ;
 +----------------+----------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x002F214A                                                                             ;
-; Checksum       ; 0x002F214A                                                                             ;
+; JTAG usercode  ; 0x00301FF9                                                                             ;
+; Checksum       ; 0x00301FF9                                                                             ;
 +----------------+----------------------------------------------------------------------------------------+
 
 
@@ -104,15 +104,15 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Mon Oct  9 15:37:05 2023
+    Info: Processing started: Sat Oct 14 14:15:27 2023
 Info: Command: quartus_asm --read_settings_files=on --write_settings_files=off GECKO -c GECKO
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4712 megabytes
-    Info: Processing ended: Mon Oct  9 15:37:06 2023
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 4713 megabytes
+    Info: Processing ended: Sat Oct 14 14:15:29 2023
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 

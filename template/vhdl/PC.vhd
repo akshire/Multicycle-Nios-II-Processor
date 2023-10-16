@@ -28,6 +28,7 @@ begin
 		elsif rising_edge(clk)then
 			address_save <= address_save+adder;
 			addr <= x"0000" & std_logic_vector(to_unsigned(address_save+adder,16));
+			--addr <= std_logic_vector (to_unsigned(-30, 32));
 		end if;
 	end process;
 	
@@ -37,7 +38,7 @@ begin
 			if add_imm = '1' then
 				adder <= to_integer(signed(imm));
 			elsif sel_imm = '1' then
-				adder <= -address_save + to_integer((shift_left(signed(imm),2)));
+				adder <= -address_save + to_integer(unsigned(shift_left(unsigned(imm),2)));
 			elsif sel_a = '1' then
 				adder <= -address_save + to_integer(unsigned(a(15 downto 2) & "00"));
 			else
@@ -46,5 +47,6 @@ begin
 		else
 			adder <= 0;
 		end if;
+		report(integer'image(adder));
 	end process;
 end synth;
