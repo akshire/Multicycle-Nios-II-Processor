@@ -1230,3 +1230,5 @@ do test_PC_complete.do
 # Simulation is successful
 # ===================================================================
 # Load canceled
+# End time: 14:53:30 on Oct 16,2023, Elapsed time: 0:28:26
+# Errors: 0, Warnings: 3
